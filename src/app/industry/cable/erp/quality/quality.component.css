@@ -1,0 +1,158 @@
+
+.hero-quality {
+  background-image: url('https://reverscore.com/wp-content/uploads/2021/10/GettyImages-602922087-27d2836e6f6b46abaeb1295ae238208b.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 40px 60px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.hero-overlay h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.hero-overlay p {
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+.quality-module {
+  background: #ffffff;
+}
+
+.module-label {
+  color: #29b6f6;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.quality-step {
+  padding: 20px;
+}
+
+.step-circle {
+  width: 45px;
+  height: 45px;
+  background: #4fc3f7;
+  color: #fff;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  line-height: 45px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.quality-step h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.quality-step p {
+  font-size: 14px;
+  color: #555;
+}
+
+
+.iqc-page {
+  background: #fff;
+}
+
+.iqc-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.iqc-list li {
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.iqc-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00bcd4;
+  font-size: 22px;
+}
+
+
+.step-list {
+  border-left: 2px solid #cfefff;
+  padding-left: 20px;
+}
+
+.step-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.step-num {
+  width: 36px;
+  height: 36px;
+  background: #d9f3ff;
+  color: #0077b6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.step-item h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.step-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.demo-box {
+  background: #dff6ff;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+
+.feature-box {
+  border: 1px solid #cfefff;
+  border-left: 5px solid #00b4d8;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  background: #f9fdff;
+}
+
+.feature-box h6 {
+  margin: 0;
+  font-weight: 600;
+  color: #0077b6;
+}
+
+.feature-box p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #555;
+}

@@ -1,0 +1,243 @@
+.inventory-hero {
+  background-image: url('https://thumbs.dreamstime.com/b/modern-warehouse-logistics-storage-area-stacked-boxes-cargo-photo-308452635.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 340px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 50px;
+  width: 100%;
+}
+
+.module-label {
+  color: #7ddcff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hero-overlay h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.inventory-content .intro-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  max-width: 1000px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.feature-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+.hero-overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 40px 60px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.hero-overlay p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+
+.grn-section h2 {
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+.grn-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.grn-list li {
+  padding: 8px 0;
+  font-size: 16px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.grn-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+.grn-img {
+  max-height: 380px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+.badge-tag {
+  border: 1px solid #00b7ff;
+  color: #00b7ff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.item {
+  border-top: 2px solid #2bb673;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.num {
+  color: #999;
+  font-size: 12px;
+}
+
+.demo-box {
+  background: #c9f5e5;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.demo-box.blue {
+  background: #d9f4ff;
+}
+
+.control-section .card-box {
+  background: #e9faff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.note {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+
+
+
+
+.inventory-hero {
+  background: #0d6efd;
+  color: #fff;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.hero-overlay p {
+  font-size: 16px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.warehouse-content {
+  padding: 40px 0;
+}
+
+.process-step {
+  border-left: 4px solid #0d6efd;
+  padding-left: 15px;
+  margin-bottom: 25px;
+}
+
+.step-number {
+  display: inline-block;
+  background: #0d6efd;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.process-step h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.process-step p {
+  margin: 0;
+  color: #555;
+}
+
+.demo-box {
+  background: #d1f7ec;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.warehouse-img {
+  max-height: 420px;
+  object-fit: cover;
+}

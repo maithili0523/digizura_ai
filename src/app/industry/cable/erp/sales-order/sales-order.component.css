@@ -1,0 +1,277 @@
+.sales-module {
+  background: #ffffff;
+}
+
+.blue-card {
+  display: block;
+  text-decoration: none;
+  background: #d9f3fb;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border-left: 6px solid #4fc3e8;
+}
+
+.blue-card h5 {
+  color: #0077b6;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.blue-card p {
+  font-size: 14px;
+  color: #444;
+  margin: 0;
+}
+
+.blue-card:hover {
+  transform: translateX(6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  background: #c8effb;
+}
+
+.meeting-img {
+  max-height: 420px;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
+
+
+.sales-detail {
+  background: #ffffff;
+}
+
+.section-tag {
+  color: #4fc3e8;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.process-list {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.process-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #444;
+}
+
+.demo-box {
+  background: #d9f3fb;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.inquiry-img {
+  max-height: 420px;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+.order-changes {
+  background: #ffffff;
+}
+
+.section-tag {
+  color: #63c6ea;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.title {
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.subtitle {
+  max-width: 850px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 40px;
+  margin-bottom: 25px;
+}
+
+.step-box {
+  position: relative;
+  padding-top: 45px;
+}
+
+.step-arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 36px;
+  background: linear-gradient(90deg, #cfeffc, #e9f8ff);
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%, 3% 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #4aaad4;
+}
+
+.step-box h5 {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.step-box p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.demo-focus {
+  background: #c9f0ff;
+  padding: 14px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #003b55;
+  margin-top: 20px;
+}
+
+.demo-video {
+  font-size: 13px;
+  color: #777;
+  margin-top: 10px;
+}
+
+.sop-module {
+  background: #ffffff;
+}
+
+.module-tag {
+  color: #5bc0eb;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.sop-item {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #6ecbff;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.sop-item .num {
+  color: #5bc0eb;
+  font-weight: 700;
+  width: 40px;
+}
+
+.sop-item h6 {
+  margin: 0;
+  font-weight: 600;
+  color: #1b4f72;
+}
+
+.sop-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.sop-img {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  max-height: 380px;
+  object-fit: cover;
+}
+
+.image-caption {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+  text-align: left;
+  border-left: 3px solid #5bc0eb;
+  padding-left: 10px;
+}
+
+.demo-link {
+  font-size: 13px;
+  color: #666;
+}
+
+
+
+.quotation-module {
+  background: #ffffff;
+}
+
+.module-tag {
+  color: #5bc0eb;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.qm-card {
+  border: 2px solid #7ad3f7;
+  border-radius: 10px;
+  padding: 18px;
+  height: 100%;
+  transition: all 0.25s ease;
+  background: #ffffff;
+}
+
+.qm-card h6 {
+  font-weight: 600;
+  color: #1b4f72;
+  margin-bottom: 6px;
+}
+
+.qm-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.qm-card:hover {
+  background: #e9f7ff;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.demo-focus {
+  background: #d9f3fb;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  border-left: 5px solid #4fc3e8;
+}
+
+.demo-link {
+  font-size: 13px;
+  color: #666;
+}
+
+
+
+
+
+
+
+
+#sales-inquiry,
+#quotation-management,
+#sales-order-creation,
+#sales-order-amendments {
+  scroll-margin-top: 130px; /* height of fixed navbar */
+}

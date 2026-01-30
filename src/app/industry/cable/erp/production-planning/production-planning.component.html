@@ -1,0 +1,314 @@
+<section class="container my-5 ppc-module">
+
+  <small class="module-label"></small>
+  <h2 class="fw-bold mb-3">Production Planning & Control</h2>
+
+  <p class="text-muted mb-4">
+    This comprehensive module manages the complete production lifecycle – from defining cable
+    construction through BOM management to stage-wise manufacturing execution with full traceability.
+  </p>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+  <a class="module-card" (click)="scrollTo('bom')">
+    <h5>Bill of Materials (BOM)</h5>
+    <p>Define multi-level cable construction specifications</p>
+  </a>
+</div>
+
+<div class="col-md-4">
+  <a class="module-card" (click)="scrollTo('production-planning')">
+    <h5>Production Planning</h5>
+    <p>Convert sales orders into optimized production schedules</p>
+  </a>
+</div>
+
+<div class="col-md-4">
+  <a class="module-card" (click)="scrollTo('work-order')">
+    <h5>Work Order Generation</h5>
+    <p>Create executable manufacturing instructions with resource allocation</p>
+  </a>
+</div>
+
+<div class="col-md-6">
+  <a class="module-card" (click)="scrollTo('manufacturing-execution')">
+    <h5>Manufacturing Execution</h5>
+    <p>Stage-wise production tracking across all cable manufacturing processes</p>
+  </a>
+</div>
+
+<div class="col-md-6">
+  <a class="module-card" (click)="scrollTo('drum-tracking')">
+    <h5>Drum & Batch Tracking</h5>
+    <p>Complete traceability for raw materials, WIP, and finished goods</p>
+  </a>
+</div>
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- BOM SECTION -->
+<section id="bom" class="container my-5 bom-section">
+
+
+  <small class="module-tag">Production Planning & Control</small>
+  <h2 class="section-title">BOM Management</h2>
+
+  <div class="row align-items-center mt-4">
+
+    <!-- LEFT IMAGE -->
+    <div class="col-md-5 text-center">
+      <img src="https://maritimereview.co.za/Portals/0/EasyDNNnews/574/Subsea.jpg" class="img-fluid" alt="BOM Management">
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="col-md-7">
+      <h4 class="sub-title">Subprocess Capabilities</h4>
+
+      <ul class="bom-list">
+        <li><strong>Multi-level BOM:</strong> Support complex nested structures for composite cable assemblies</li>
+        <li><strong>Cable Construction Definition:</strong> Detailed specification of conductors, insulation, shielding, and jacketing layers</li>
+        <li><strong>Material Yield Percentage:</strong> Account for expected material utilization and loss factors</li>
+        <li><strong>Scrap Definition:</strong> Configure acceptable waste parameters for each production stage</li>
+        <li><strong>BOM Versioning:</strong> Maintain historical records of engineering changes and revisions</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- PRODUCTION PLANNING -->
+<section id="production-planning" class="container my-5 production-planning">
+
+
+  <small class="module-tag">Production Planning & Control</small>
+  <h2 class="fw-bold mb-4">Production Planning</h2>
+
+  <div class="row align-items-center">
+
+    <!-- LEFT IMAGE -->
+    <div class="col-md-6 text-center">
+      <img 
+        src="https://png.pngtree.com/thumb_back/fw800/background/20250603/pngtree-a-person-analyzes-architectural-plans-in-modern-workspace-filled-with-plants-image_17378146.jpg"
+        class="img-fluid planning-img"
+        alt="Production Planning"
+      >
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="col-md-6">
+
+      <div class="step">
+        <span>1</span>
+        <div>
+          <h5>Sales Order Conversion</h5>
+          <p>Transform confirmed orders into production requirements with automatic material explosion.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span>2</span>
+        <div>
+          <h5>Machine Capacity Planning</h5>
+          <p>Balance workload across available equipment considering technical capabilities and throughput.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span>3</span>
+        <div>
+          <h5>Shift-wise Allocation</h5>
+          <p>Optimize resource utilization by distributing work across production shifts.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span>4</span>
+        <div>
+          <h5>Plan vs Actual Comparison</h5>
+          <p>Monitor performance variances and identify bottlenecks for continuous improvement.</p>
+        </div>
+      </div>
+
+      <div class="demo-box mt-4">
+        <strong>Demo Focus:</strong> Complete order-driven production planning workflow from sales commitment to scheduled manufacturing execution.
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- WORK ORDER -->
+<section id="work-order" class="container my-5 workorder-module">
+
+
+  <small class="module-tag">Production Planning & Control</small>
+  <h2 class="fw-bold mb-4">Work Order Generation</h2>
+
+  <div class="row align-items-center">
+
+    <!-- LEFT CONTENT -->
+    <div class="col-md-6">
+
+      <div class="step">
+        <span>1</span>
+        <div>
+          <h5>Work Order Creation</h5>
+          <p>Generate detailed manufacturing instructions linked to sales commitments.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span>2</span>
+        <div>
+          <h5>Machine Assignment</h5>
+          <p>Allocate specific equipment based on cable type and production requirements.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span>3</span>
+        <div>
+          <h5>Raw Material Reservation</h5>
+          <p>Lock inventory for dedicated use, preventing stock-outs and conflicts.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span>4</span>
+        <div>
+          <h5>Stage Sequencing</h5>
+          <p>Define logical progression through drawing, stranding, insulation, and finishing.</p>
+        </div>
+      </div>
+
+      <div class="demo-box mt-4">
+        <strong>Demo Focus:</strong> Work order drill-down showing complete linkage from sales order to production stages.
+      </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="col-md-6 text-center">
+      <img 
+        src="https://img.freepik.com/premium-vector/businessman-working-office-black-white_1057-104745.jpg"
+        class="img-fluid workorder-img"
+        alt="Work Order Generation"
+      >
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- MANUFACTURING EXECUTION -->
+<section id="manufacturing-execution" class="container my-5 me-module">
+
+
+  <small class="module-tag">Production Planning & Control</small>
+  <h2 class="fw-bold mb-3">Manufacturing Execution</h2>
+
+  <p class="text-muted mb-4">
+    Stage-wise production tracking ensures quality control and complete material traceability
+    throughout the cable manufacturing process.
+  </p>
+
+  <div class="row align-items-center">
+
+    <!-- LEFT CONTENT -->
+    <div class="col-md-6">
+
+      <div class="step"><span>1</span> Drawing – Wire drawing to specified gauge</div>
+      <div class="step"><span>2</span> Stranding – Multiple wire bundling and twisting</div>
+      <div class="step"><span>3</span> Insulation – Protective coating application</div>
+      <div class="step"><span>4</span> Laying – Core assembly and configuration</div>
+      <div class="step"><span>5</span> Armouring – Mechanical protection layer</div>
+      <div class="step"><span>6</span> Sheathing – Final outer jacket application</div>
+
+      <div class="demo-box mt-3">
+        Demo Focus: Stage-wise production entry workflow with real-time material
+        consumption tracking and yield analysis.
+      </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="col-md-6 text-center">
+      <img
+  src="https://pdfa.org/wp-content/uploads/2024/05/Firefly-digital-print-manufacturing-process-jobticket-75514.jpg"
+  class="img-fluid me-img"
+  alt="Manufacturing Execution">
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DRUM & BATCH TRACKING -->
+<section id="drum-tracking" class="container my-5">
+
+
+  <div class="row align-items-center">
+
+    <!-- Left Content -->
+    <div class="col-md-6">
+      <h2>Drum & Batch Tracking</h2>
+      <p>
+        The Drum & Batch Tracking system provides complete traceability from raw material
+        receipt through final dispatch.
+      </p>
+
+      <ul class="tracking-list">
+        <li>
+          <h6>Drum Number Generation</h6>
+          <p>Unique identifiers for every production drum</p>
+        </li>
+        <li>
+          <h6>Length Tracking</h6>
+          <p>Precise measurement and documentation</p>
+        </li>
+        <li>
+          <h6>Batch Traceability</h6>
+          <p>Complete material genealogy mapping</p>
+        </li>
+        <li>
+          <h6>Rework Handling</h6>
+          <p>Systematic quality correction processes</p>
+        </li>
+      </ul>
+
+      <div class="demo-box">
+        <strong>Demo Highlight:</strong>
+        End-to-end traceability from incoming copper to customer dispatch
+        with full material history.
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="col-md-6 text-center">
+      <img
+        src="https://www.shutterstock.com/image-photo/coils-detonation-cord-multicolored-wire-600w-1477081757.jpg"
+        class="img-fluid rounded shadow"
+        alt="Cable Drum Tracking"
+      />
+    </div>
+
+  </div>
+
+</section>
+

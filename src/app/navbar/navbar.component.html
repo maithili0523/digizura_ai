@@ -1,0 +1,73 @@
+<div class="fixed-header">
+  <div class="top-bar">
+    <span>📞 +91 99640 80313</span>
+    <span>✉ central.operations&#64;digizura.com</span>
+  </div>
+
+  <div class="navbar">
+    <div class="logo">
+  <a routerLink="/home">
+    <img src="https://digizura.com/img/log3.png" />
+  </a>
+</div>
+
+
+    <div class="menu">
+      <span routerLink="/about" class="nav-link">ABOUT US</span>
+
+
+      <span (click)="toggleIndustry()">INDUSTRY SOLUTIONS</span>
+     <span routerLink="/contact" class="nav-link">CONTACT US</span>
+    </div>
+
+    <button class="demo-btn" routerLink="/demo">View Demo ↗</button>
+
+  </div>
+</div>
+
+<div class="layout">
+  <div class="industry-panel" *ngIf="showIndustryPanel">
+    <div class="panel-header">
+      INDUSTRY SOLUTIONS
+      <span (click)="closeAll()" style="cursor:pointer">✕</span>
+    </div>
+
+   <div class="main-item"
+     (click)="onClick($event)">
+  Cable
+    <div class="sub-list" *ngIf="showSubMenu">
+      <div class="sub-item" (click)="openCableMaker($event)">
+  Cable Maker
+</div>
+
+
+      <div class="sub-item" (click)="toggleErp($event)">
+  ERP for Cable
+
+  <div class="erp-sub-list" *ngIf="showErpMenu">
+    <div class="erp-sub-item" routerLink="/erp/master-data">Master Data Management</div>
+    <div class="erp-sub-item" routerLink="/erp/sales-order">Sales & Order Management</div>
+   <div class="erp-sub-item" routerLink="/erp/production-planning">
+  Production Planning & Control
+</div>
+
+    <div class="erp-sub-item" routerLink="/erp/quality">Quality Management</div>
+    <div class="erp-sub-item" routerLink="/erp/inventory">Inventory & Warehouse</div>
+    <div class="erp-sub-item" routerLink="/erp/dispatch">Dispatch & Logistics</div>
+    <div class="erp-sub-item" routerLink="/erp/finance">Finance & Costing</div>
+    <div class="erp-sub-item" routerLink="/erp/reports">Reports & Dashboards</div>
+    <div class="erp-sub-item" routerLink="/erp/ai">AI Applications</div>
+  </div>
+</div>
+
+      <div class="sub-item">AI for Cable</div>
+    </div>
+</div>
+
+
+  </div>
+
+  <div class="page-content" [class.shifted]="showIndustryPanel">
+    <router-outlet></router-outlet>
+  </div>
+</div>

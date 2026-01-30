@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.module-intro {
+  padding: 80px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  background: #ffffff;
+}
+
+.module-tag {
+  display: inline-block;
+  color: #4bb3ff;
+  border: 1px solid #4bb3ff;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.module-intro h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 15px 0;
+  color: #1f2a44;
+}
+
+.module-intro p {
+  font-size: 15px;
+  color: #6b7280;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+.module-intro img {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* ---------------- AUDIT & COMPLIANCE ---------------- */
+
+.audit-section {
+  padding: 70px 100px;
+  background: #ffffff;
+}
+
+.audit-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #1f2a44;
+}
+
+.audit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.audit-card {
+  background: #e9f5ff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+
+.audit-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #1f2a44;
+}
+
+.audit-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.demo-bar {
+  margin-top: 35px;
+  background: #d4efff;
+  padding: 16px 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #0f3d5e;
+  font-weight: 500;
+}
+
+/* ---------------- MANAGEMENT DASHBOARD ---------------- */
+
+.management-section {
+  padding: 80px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  background: #ffffff;
+}
+
+.management-section img {
+  width: 100%;
+  max-width: 450px;
+}
+
+.management-section h2 {
+  font-size: 32px;
+  color: #1f2a44;
+  margin-bottom: 8px;
+}
+
+.management-section h4 {
+  font-size: 18px;
+  color: #3b82f6;
+  margin-bottom: 18px;
+}
+
+.management-section ul {
+  padding-left: 18px;
+}
+
+.management-section ul li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.demo-bar.green {
+  background: #d9f7ef;
+  margin-top: 25px;
+  padding: 16px 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #065f46;
+  font-weight: 500;
+}

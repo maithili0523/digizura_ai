@@ -1,0 +1,168 @@
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+}
+
+.top-bar {
+  background: linear-gradient(to right, #6fb6ff, #9fd3ff);
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu {
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  font-weight: 600;
+  color: #3a7ecb;
+  cursor: pointer;
+}
+
+.demo-btn {
+  background: #6fb6ff;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+.layout {
+  display: flex;
+  margin-top: 110px;
+}
+
+.industry-panel {
+  position: fixed;
+  top: 110px;
+  left: 0;
+  width: 240px;
+  height: calc(100vh - 110px);
+  background: linear-gradient(180deg, #f5faff, #eaf3ff);
+  border-right: 1px solid #d6e7ff;
+  padding: 15px;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+
+
+
+.panel-header {
+  font-weight: bold;
+  color: #3a7ecb;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.main-item {
+  background: linear-gradient(to right, #7bbcff, #5aa7f5);
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+.sub-list {
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  width: 200px;
+  background: white;
+  border: 1px solid #d6e7ff;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 10000;
+}
+
+.sub-item {
+  padding: 6px 0;
+  color: #3a7ecb;
+  cursor: pointer;
+}
+
+.sub-list {
+  max-height: 60vh;        /* allow scroll */
+  overflow-y: auto;
+}
+
+.erp-sub-list {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+/* Remove blue selection / highlight on double click */
+.main-item,
+.sub-item,
+.erp-sub-item {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.main-item:active,
+.main-item:focus,
+.sub-item:active,
+.sub-item:focus,
+.erp-sub-item:active,
+.erp-sub-item:focus {
+  background: transparent !important;
+  outline: none !important;
+}
+
+/* If any are links */
+a:active,
+a:focus {
+  background: transparent !important;
+  outline: none !important;
+}
+
+
+
+
+.page-content {
+  flex: 1;
+  padding: 0;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+.page-content.shifted {
+  margin-left: 240px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.erp-sub-list {
+  margin-left: 20px;
+  margin-top: 6px;
+  border-left: 2px solid #d6e7ff;
+  padding-left: 10px;
+}
+.erp-sub-item {
+  white-space: nowrap;    /* single line only */
+  font-size: 13px;        /* smaller text */
+}

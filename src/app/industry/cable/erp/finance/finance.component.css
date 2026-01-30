@@ -1,0 +1,251 @@
+.finance-hero {
+  display: flex;
+  gap: 50px;
+  padding: 60px;
+  align-items: center;
+}
+
+.finance-left {
+  width: 50%;
+}
+
+.module-tag {
+  color: #4fc3f7;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.finance-left h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.finance-left p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.finance-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: #f7f3f3;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card.full {
+  grid-column: span 2;
+}
+
+.finance-right {
+  width: 50%;
+}
+
+.finance-right img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+
+
+
+.ap-section {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  padding: 60px;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border: 1px solid #7ecbff;
+  color: #2aa3ff;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.left p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  font-size: 16px;
+}
+
+.right img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+}
+
+.demo-box {
+  margin-top: 25px;
+  background: #d9f7ef;
+  padding: 18px;
+  border-radius: 6px;
+  border-left: 5px solid #00b894;
+  font-size: 14px;
+}
+
+
+
+.ar-section {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  padding: 60px;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border: 1px solid #7ecbff;
+  color: #2aa3ff;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.left p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  font-size: 16px;
+}
+
+.right img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+}
+
+.demo-box {
+  margin-top: 25px;
+  background: #d9f7ef;
+  padding: 18px;
+  border-radius: 6px;
+  border-left: 5px solid #00b894;
+  font-size: 14px;
+}
+
+
+
+.costing-section {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  padding: 60px;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border: 1px solid #7ecbff;
+  color: #2aa3ff;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+
+.card h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.demo-box {
+  margin-top: 20px;
+  background: #d9f7ef;
+  padding: 18px;
+  border-radius: 6px;
+  border-left: 5px solid #00b894;
+  font-size: 14px;
+}
+
+.right img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 14px;
+}
