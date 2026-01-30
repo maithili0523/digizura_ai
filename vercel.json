@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "dist/digizura/browser",
   "rewrites": [
     {
       "source": "/(.*)",
