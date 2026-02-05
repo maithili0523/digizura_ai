@@ -1,31 +1,26 @@
-<section class="hero">
+<div class="hero">
+  <div class="overlay">
+    <div class="text-slider">
 
-  <div
-    class="slide"
-    *ngFor="let slide of slides; let i = index"
-    [class.active]="i === currentSlide"
-    [style.backgroundImage]="'url(' + slide.image + ')'"
-  >
-    <div class="overlay">
-      <h1 class="quote">{{ slide.text }}</h1>
+      <div
+        class="slide"
+        *ngFor="let text of texts; let i = index"
+        [class.active]="i === currentIndex"
+      >
+
+        <!-- First slide with CableNXT styling -->
+        <span *ngIf="i === 0">
+          Transforming Business Process
+<span class="cable">Cable</span><span class="nxt">NXT</span>
+        </span>
+
+        <!-- Other slides -->
+        <span *ngIf="i !== 0">
+          {{ text }}
+        </span>
+
+      </div>
+
     </div>
   </div>
-
-  <div class="dots">
-    <span
-      *ngFor="let s of slides; let i = index"
-      [class.active]="i === currentSlide"
-      (click)="goToSlide(i)">
-    </span>
-  </div>
-
-</section>
-
-
-
-
-
-
-
-
-
+</div>

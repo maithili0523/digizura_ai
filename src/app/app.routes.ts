@@ -27,6 +27,7 @@ import { AiComponent } from './industry/cable/erp/ai/ai.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 
+import { AiForCableComponent } from './industry/cable/ai-for-cable/ai-for-cable.component';
 
 
 export const routes: Routes = [
@@ -49,6 +50,7 @@ export const routes: Routes = [
 
 { path: 'cable-maker', component: CableMakerComponent },
 
+{ path: 'ai-for-cable', component: AiForCableComponent },
 
 { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },

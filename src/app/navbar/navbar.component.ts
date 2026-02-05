@@ -1,75 +1,61 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
 
-  showIndustryPanel = false;
-  showSubMenu = false;
-  showErpMenu = false;
+  showIndustry = false;
+  showCable = false;
+  showErp = false;
 
-  clickTimer: any;
-  clickCount: number = 0;
+  clickTimer: any = null;
 
   constructor(private router: Router) {}
 
-  toggleIndustry() {
-    this.showIndustryPanel = !this.showIndustryPanel;
-    this.showSubMenu = false;
-    this.showErpMenu = false;
-
-    if (this.showIndustryPanel) {
-      document.body.classList.add('body-with-panel');
-    } else {
-      document.body.classList.remove('body-with-panel');
-    }
+  toggleIndustry(e: MouseEvent) {
+    e.stopPropagation();
+    this.showIndustry = !this.showIndustry;
+    this.showCable = false;
+    this.showErp = false;
   }
 
-  // SINGLE CLICK → open Cable page
-  // DOUBLE CLICK → open submenu
-  onClick(event: Event) {
-    this.clickCount++;
+  toggleCable(e: MouseEvent) {
+    e.stopPropagation();
 
-    if (this.clickCount === 1) {
-      this.clickTimer = setTimeout(() => {
-        this.clickCount = 0;
-        this.router.navigate(['/cable']);
-      }, 400);
-    } 
-    else if (this.clickCount === 2) {
+    if (this.clickTimer) {
+      // Double click detected
       clearTimeout(this.clickTimer);
-      this.clickCount = 0;
-      this.toggleSubMenu();
+      this.clickTimer = null;
+
+      this.showCable = !this.showCable;
+      this.showErp = false;
+    } else {
+      // First click
+      this.clickTimer = setTimeout(() => {
+        this.router.navigate(['/cable']);
+        this.closeAll();
+        this.clickTimer = null;
+      }, 250); // delay to detect double click
     }
   }
 
-  toggleSubMenu() {
-    this.showSubMenu = !this.showSubMenu;
-    this.showErpMenu = false; // close ERP when toggling Cable
+  toggleErp(e: MouseEvent) {
+    e.stopPropagation();
+    this.showErp = !this.showErp;
   }
 
-  toggleErp(event: Event) {
-    event.stopPropagation();
-    this.showErpMenu = !this.showErpMenu; // toggle ERP open/close
-  }
-
-  openCableMaker(event: Event) {
-    event.stopPropagation();
-    this.showErpMenu = false; // ensure ERP is closed
-    this.router.navigate(['/cable-maker']);
-  }
-
+  @HostListener('document:click')
   closeAll() {
-    this.showIndustryPanel = false;
-    this.showSubMenu = false;
-    this.showErpMenu = false;
-    document.body.classList.remove('body-with-panel');
+    this.showIndustry = false;
+    this.showCable = false;
+    this.showErp = false;
+    this.clickTimer = null;
   }
 }
