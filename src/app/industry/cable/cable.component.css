@@ -66,3 +66,26 @@
     font-size: 28px;
   }
 }
+
+
+
+
+/* Exact CableNXT logo look */
+.cable-logo {
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+  color: white;
+  font-size: inherit;
+  line-height: 1;
+}
+
+.cable-logo .nxt {
+  position: absolute;
+  top: -0.15em;     /* move slightly above Cable */
+  right: -1.9em;   /* sit at end of Cable */
+  font-size: 0.60em; /* small size like logo */
+  font-weight: 400;  /* thin text */
+  letter-spacing: 1px;
+  color: white;
+}

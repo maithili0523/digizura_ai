@@ -47,9 +47,16 @@
 </a>
 
             <div class="erp-container">
-  <span class="dropdown-item" (click)="toggleErp($event)">
-    ERP for Cable ▾
+ <span class="dropdown-item" (click)="toggleErp($event)">
+  ERP for 
+  <span class="cable-logo">
+    Cable<span class="nxt">NXT</span>
   </span>
+  ▾
+</span>
+
+
+
 
   <!-- LEVEL 3 -->
   <div class="erp-list" *ngIf="showErp">
@@ -69,22 +76,32 @@
           <a class="dropdown-item"
    routerLink="/ai-for-cable"
    (click)="closeAll()">
-  AI for Cable
+  AI for
+  <span class="cable-logo">
+    Cable<span class="nxt">NXT</span>
+  </span>
 </a>
+
 
 
           </div>
         </div>
       </div>
 
-      <!-- OTHER MENU -->
-      <span class="menu-link">ABOUT US</span>
-      <span class="menu-link">CONTACT US</span>
+      <a class="menu-link" routerLink="/about" (click)="closeAll()">
+  ABOUT US
+</a>
+
+<a class="menu-link" routerLink="/contact" (click)="closeAll()">
+  CONTACT US
+</a>
 
     </div>
 
     <!-- BUTTON -->
-    <button class="demo-btn">View Demo</button>
+    <button class="demo-btn" routerLink="/demo" (click)="closeAll()">
+  View Demo
+</button>
 
   </nav>
 </div>

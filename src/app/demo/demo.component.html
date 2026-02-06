@@ -1,1 +1,81 @@
-<p>demo works!</p>
+<div class="demo-page">
+
+  <!-- HERO -->
+  <section class="demo-hero">
+    <h1>Product Demo</h1>
+    <p>Explore our intelligent enterprise solutions.</p>
+  </section>
+
+  <!-- DEMO CARDS -->
+  <div class="demo-container">
+
+    <div class="demo-card">
+      <h3>ERP for Cable </h3>
+      <p>
+        Complete enterprise solution for cable manufacturing,
+        inventory, production, finance, and reporting.
+      </p>
+      <button (click)="openForm()">Request Demo</button>
+    </div>
+
+    <div class="demo-card">
+      <h3>AI for Cable</h3>
+      <p>
+        AI-powered insights for quality control, predictive
+        maintenance, and production optimization.
+      </p>
+      <button (click)="openForm()">Request Demo</button>
+    </div>
+
+    <div class="demo-card">
+  <h3>Cable Maker </h3>
+  <p>
+    Specialized solution for cable manufacturers covering
+    production planning, inventory control, quality management,
+    and dispatch operations.
+  </p>
+  <button (click)="openForm()">Request Demo</button>
+</div>
+
+
+  </div>
+
+  <!-- REQUEST DEMO FORM POPUP -->
+  <div class="popup-overlay" *ngIf="showForm">
+    <div class="popup">
+      <h2>Request a Demo</h2>
+
+      <form [formGroup]="demoForm" (ngSubmit)="submitDemo()">
+
+        <input type="text" placeholder="Your Name" formControlName="name">
+        <small class="error" *ngIf="demoForm.get('name')?.touched && demoForm.get('name')?.invalid">
+          Name is required.
+        </small>
+
+        <input type="email" placeholder="Your Email" formControlName="email">
+        <small class="error" *ngIf="demoForm.get('email')?.touched && demoForm.get('email')?.invalid">
+          Enter a valid email.
+        </small>
+
+        <input type="text" placeholder="Company Name" formControlName="company">
+        <small class="error" *ngIf="demoForm.get('company')?.touched && demoForm.get('company')?.invalid">
+          Company name is required.
+        </small>
+
+        <button type="submit">Submit Request</button>
+        <button type="button" class="close-btn" (click)="closeForm()">Cancel</button>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- SUCCESS POPUP -->
+  <div class="popup-overlay" *ngIf="showSuccess">
+    <div class="popup">
+      <h2>Request Sent</h2>
+      <p>Our team will contact you shortly.</p>
+      <button (click)="closeSuccess()">OK</button>
+    </div>
+  </div>
+
+</div>

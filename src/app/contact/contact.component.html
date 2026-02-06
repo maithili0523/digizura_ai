@@ -1,85 +1,57 @@
-<!-- ================= HERO ================= -->
-<section class="contact-hero">
-  <div class="hero-text">
-  </div>
-</section>
+<div class="contact-page">
 
-<!-- ================= WORKING LOCATION ================= -->
-<section class="working-location">
-  <div class="working-left">
-    <h2>Working Location</h2>
+  <section class="contact-hero">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you.</p>
+  </section>
 
-    <div class="icon-box">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/854/854878.png"
-        alt="location icon"
-      />
-    </div>
+  <div class="contact-container">
 
-    <p>
-      Digizura empowers businesses across India by delivering scalable,
-      reliable and innovative digital solutions.
-    </p>
-
-    <div class="call-box">
-      +91 99640 80313
-    </div>
-  </div>
-
-  <div class="working-right">
-    <!-- GREEN INDIA MAP -->
-    <img
-      src="https://ecopmin.com/wp-content/uploads/2021/07/INDIA-bangalore-out-png-01.png"
-      alt="India map"
-      class="india-map"
-    />
-  </div>
-</section>
-
-
-<section class="office-location">
-  <h2>Office Location</h2>
-
-  <div class="office-wrapper">
-    <!-- LEFT -->
-    <div class="office-tabs">
-      <div class="tab active">Bengaluru</div>
-    </div>
-
-     
-
-    <!-- RIGHT -->
-    <div class="office-content">
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
       <p>
-        <strong>Address :</strong><br />
-        Digizura Technologies<br />
-        Bengaluru, Karnataka – 560103<br />
-        India
+        <strong>Email:</strong>
+        central.operations&#64;digizura.com
       </p>
+      <p><strong>Company:</strong> Digizura Technologies Pvt. Ltd.</p>
+    </div>
+<div class="contact-form">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
 
-      <p>
-        <strong>Phone :</strong> +91 99640 80313<br />
-       <a href="mailto:central.operations@digizura.com">
-  central.operations&#64;digizura.com
-</a>
+    <input type="text" placeholder="Your Name" formControlName="name">
+    <small class="error" *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
+      Name must be at least 3 characters.
+    </small>
+
+    <input type="email" placeholder="Your Email" formControlName="email">
+    <small class="error" *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">
+      Enter a valid email address.
+    </small>
+
+    <input type="text" placeholder="Subject" formControlName="subject">
+    <small class="error" *ngIf="contactForm.get('subject')?.touched && contactForm.get('subject')?.invalid">
+      Subject is required.
+    </small>
+
+    <textarea rows="5" placeholder="Your Message" formControlName="message"></textarea>
+    <small class="error" *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
+      Message must be at least 10 characters.
+    </small>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+</div>
 
 
-      </p>
-
-
-      <div class="office-media">
-        <img
-          src="https://images.unsplash.com/photo-1568992688065-536aad8a12f6"
-          alt="Digizura Office"
-        />
-
-        <!-- BENGALURU GOOGLE MAP -->
-        <iframe
-          src="https://www.google.com/maps?q=Bengaluru,Karnataka&output=embed"
-          loading="lazy">
-        </iframe>
-      </div>
+  <!-- SUCCESS POPUP -->
+  <div class="popup-overlay" *ngIf="showPopup">
+    <div class="popup">
+      <h2>Message Sent</h2>
+      <p>Your message has been sent successfully.</p>
+      <button (click)="closePopup()">OK</button>
     </div>
   </div>
-</section>
 
+</div>

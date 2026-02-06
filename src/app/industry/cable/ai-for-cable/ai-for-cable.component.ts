@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-ai-for-cable',
-  standalone: true,
-  imports: [],
   templateUrl: './ai-for-cable.component.html',
-  styleUrl: './ai-for-cable.component.css'
+  styleUrls: ['./ai-for-cable.component.css']
 })
-export class AiForCableComponent {
+export class AiForCableComponent implements AfterViewInit {
 
+  @HostListener('window:scroll', [])
+  onScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+    const windowHeight = window.innerHeight;
+
+    reveals.forEach((el: Element) => {
+      const top = el.getBoundingClientRect().top;
+      if (top < windowHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  }
+
+  ngAfterViewInit() {
+    this.onScroll();
+  }
 }
