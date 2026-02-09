@@ -1,13 +1,17 @@
 .hero {
   height: calc(100vh - 80px);
 
-  background:
+  background-image:
     linear-gradient(to right, rgba(11,31,58,0.85), rgba(11,31,58,0.2)),
+    url('https://c4.wallpaperflare.com/wallpaper/244/150/511/simple-background-texture-wallpaper-preview.jpg'),
     url('https://c4.wallpaperflare.com/wallpaper/244/150/511/simple-background-texture-wallpaper-preview.jpg');
 
-  background-size: cover;
-  background-position: center;
+  background-position: center, left center, right center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: cover, 50% 100%, 50% 100%;
 }
+
+
 
 .overlay {
   background: rgba(0, 0, 0, 0.35);

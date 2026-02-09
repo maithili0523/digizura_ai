@@ -13,7 +13,7 @@ export class HeroComponent implements OnInit {
   texts = [
     'slide1',
     'Partnering In Success',
-    'AI On ERP'
+    'AI ON ERP'
   ];
 
   currentIndex = 0;
