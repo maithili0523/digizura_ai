@@ -45,3 +45,93 @@
   </div>
 
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SECTION 1: OVERVIEW -->
+<section class="section">
+  <div class="container two-col">
+    <div class="text">
+      <h2>Cable Manufacturing, Digitally Transformed</h2>
+      <p>
+        Cable production involves multiple stages such as wire drawing,
+        stranding, insulation, sheathing, testing, and dispatch.
+        CableNXT connects every department into one intelligent platform.
+      </p>
+
+      <ul class="features">
+        <li>Real-time production visibility</li>
+        <li>Material and inventory tracking</li>
+        <li>Quality and compliance control</li>
+        <li>Reduced waste and higher efficiency</li>
+      </ul>
+    </div>
+
+    <div class="image">
+      <img src="assets/images/cable-factory.jpg" alt="Cable Factory">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: ERP -->
+<section class="section light">
+  <div class="container center">
+    <h2>ERP for CableNXT</h2>
+
+    <div class="grid">
+      <div class="card" *ngFor="let module of erpModules">
+        <mat-icon>{{ module.icon }}</mat-icon>
+        <h3>{{ module.title }}</h3>
+        <p>{{ module.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: AI -->
+<section class="section">
+  <div class="container center">
+    <h2>AI for CableNXT</h2>
+
+    <div class="grid">
+      <div class="card" *ngFor="let ai of aiFeatures">
+        <mat-icon>{{ ai.icon }}</mat-icon>
+        <h3>{{ ai.title }}</h3>
+        <p>{{ ai.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: BENEFITS -->
+<section class="section dark">
+  <div class="container center">
+    <h2 class="white">Why Choose CableNXT</h2>
+
+    <div class="grid">
+      <div class="card dark-card" *ngFor="let item of benefits">
+        <mat-icon>{{ item.icon }}</mat-icon>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>

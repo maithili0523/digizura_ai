@@ -41,6 +41,26 @@
   color: white;
 }
 
+.slide {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  font-size: 42px;
+  font-weight: 600;
+  color: white;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+
+
 .slide.active {
   opacity: 1;
   transform: translateX(0);
@@ -57,3 +77,4 @@
   top: -10px;         /* slightly raised */
   margin-left: 3px;
 }
+

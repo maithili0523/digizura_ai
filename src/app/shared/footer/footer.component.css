@@ -29,10 +29,10 @@
 
 
 
-
 .footer-map {
-  width: 100%;
-  background: #ffffff;   /* white background on left & right */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,12 +40,13 @@
 }
 
 .footer-map img {
-  height: 400px;        /* your required height */
-  width: auto;         /* keep original width */
-  max-width: 100%;     /* responsive */
-  object-fit: contain; /* full image visible */
+  height: 400px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
   display: block;
 }
+
 
 
 
