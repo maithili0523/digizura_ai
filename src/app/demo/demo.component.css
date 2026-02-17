@@ -12,17 +12,20 @@
 
 .demo-hero h1 {
   font-size: 42px;
+  margin: 0;
 }
 
-/* DEMO CARDS */
+/* DEMO CARDS CONTAINER */
 .demo-container {
   display: flex;
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
   padding: 60px 20px;
+  align-items: stretch; /* ensures equal height cards */
 }
 
+/* DEMO CARD */
 .demo-card {
   background: white;
   border: 1px solid #e0e0e0;
@@ -30,22 +33,43 @@
   width: 280px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes button to bottom */
 }
 
+/* CARD TITLE */
 .demo-card h3 {
   color: #0b2a5b;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
+/* CARD TEXT */
+.demo-card p {
+  flex-grow: 1; /* makes text take space so button aligns */
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
 .demo-card button {
   background: #0b2a5b;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 0;
+  width: 160px;
+  margin: 0 auto;
   cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.3s;
 }
 
-/* POPUP */
+.demo-card button:hover {
+  background: #082047;
+}
+
+/* POPUP OVERLAY */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -58,19 +82,25 @@
   align-items: center;
 }
 
+/* POPUP BOX */
 .popup {
   background: white;
   padding: 30px;
   width: 320px;
   text-align: center;
+  border-radius: 6px;
 }
 
+/* INPUT FIELDS */
 .popup input {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
+/* POPUP BUTTONS */
 .popup button {
   margin: 5px;
   padding: 10px 15px;
@@ -78,12 +108,23 @@
   background: #0b2a5b;
   color: white;
   cursor: pointer;
+  border-radius: 4px;
 }
 
+.popup button:hover {
+  background: #082047;
+}
+
+/* CLOSE BUTTON */
 .close-btn {
   background: gray;
 }
 
+.close-btn:hover {
+  background: #555;
+}
+
+/* ERROR TEXT */
 .error {
   color: red;
   font-size: 12px;

@@ -21,7 +21,7 @@
       <div class="menu-wrapper">
 
         <span class="menu-link" (click)="toggleIndustry($event)">
-          INDUSTRY SOLUTION ▾
+          INDUSTRY SOLUTIONS ▾
         </span>
 
         <!-- LEVEL 1 -->
@@ -32,8 +32,16 @@
         >
 
           <div class="dropdown-item" (click)="toggleCable($event)">
-  Cable ▾
+  <span class="cable-logo">
+    Cable<span class="nxt">NXT</span>
+  </span> ▾ 
 </div>
+
+
+ 
+
+
+
 
 
 
@@ -43,7 +51,9 @@
             <a class="dropdown-item"
    routerLink="/cable-maker"
    (click)="closeAll()">
-  Cable Maker
+  <span class="cable-logo">
+    Cable<span class="nxt">MAKER</span>
+  </span>
 </a>
 
             <div class="erp-container">
@@ -76,9 +86,10 @@
           <a class="dropdown-item"
    routerLink="/ai-for-cable"
    (click)="closeAll()">
-  AI for
+  
   <span class="cable-logo">
     Cable<span class="nxt">NXT</span>
+    AI
   </span>
 </a>
 
@@ -100,7 +111,7 @@
 
     <!-- BUTTON -->
     <button class="demo-btn" routerLink="/demo" (click)="closeAll()">
-  View Demo
+  VIEW DEMO
 </button>
 
   </nav>

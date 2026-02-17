@@ -1,33 +1,73 @@
-/* Smooth scroll for in-page navigation */
+/* ===============================
+GLOBAL TYPOGRAPHY
+=============================== */
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  color: #1f2d3d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Headings */
+h1, .display-4 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h2, .section-title {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p, li {
+  font-size: 16px;
+}
+
+/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* HERO */
+/* ===============================
+HERO SECTION
+=============================== */
+
 .hero-master {
   background: url("https://content.thriveglobal.com/wp-content/uploads/2020/08/AdobeStock_251202063-1.jpeg") center center / cover no-repeat;
   height: 80vh;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .hero-master .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .hero-master h1 {
-  font-size: 3rem;
+  color: white;
 }
 
 .hero-master p {
   max-width: 650px;
+  color: #e9ecef;
 }
 
-/* TOP CARDS */
+/* ===============================
+MODULE CARDS (TOP)
+=============================== */
+
 .module-title {
   font-size: 32px;
-
   font-weight: 700;
   color: #2c3e50;
 }
@@ -46,6 +86,7 @@ html {
   color: inherit;
   transition: 0.3s ease;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  height: 100%;
 }
 
 .module-card:hover {
@@ -59,11 +100,18 @@ html {
 }
 
 .module-card p {
-  font-size: 14px;
+  font-size: 15px;
   color: #555;
 }
 
-/* COMMON SECTION STYLES */
+/* ===============================
+COMMON SECTION STYLES
+=============================== */
+
+section {
+  padding: 70px 0;
+}
+
 .section-tag {
   font-size: 12px;
   letter-spacing: 1px;
@@ -72,100 +120,73 @@ html {
 }
 
 .section-title {
-  font-size: 34px;
-  font-weight: 700;
-  color: #1f2d3d;
+  margin-bottom: 12px;
 }
 
 .section-intro {
   color: #6c757d;
   max-width: 650px;
+  margin-bottom: 18px;
+  line-height: 1.7;
 }
 
-/* CUSTOMER MASTER */
-.customer-master-section {
-  padding: 70px 0;
-  border-top: 1px solid #eee;
-}
-
-.process-list li {
-  margin-bottom: 12px;
-  font-size: 15px;
-}
-
-.cm-main-image {
-  max-width: 90%;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.value-box {
-  background: #f4f9ff;
-  padding: 25px;
-  border-radius: 12px;
-  height: 100%;
-}
-
-.value-box h6 {
-  color: #0d6efd;
-  font-weight: 600;
-}
-
-.demo-focus {
-  background: linear-gradient(135deg, #e6f4ff, #f8fbff);
-  padding: 35px;
-  border-left: 5px solid #0d6efd;
-  border-radius: 12px;
-}
-
-/* VENDOR MASTER */
-.vendor-master-section {
-  padding: 70px 0;
-  border-top: 1px solid #eee;
-}
-
-.process-block h6 {
-  color: #0d6efd;
-  font-weight: 600;
-}
-
-.vendor-image {
-  max-width: 90%;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-/* RAW MATERIAL */
-.raw-material-section {
-  padding: 70px 0;
-  border-top: 1px solid #eee;
-}
-
-.process-card {
-  background: #f4f9ff;
-  padding: 22px;
-  border-radius: 12px;
-  height: 100%;
-}
-
-.process-card h6 {
-  color: #0d6efd;
-  font-weight: 600;
-}
-
-/* FINISHED GOODS */
-.config-list {
-  padding-left: 18px;
-}
-
+/* Lists */
+.process-list li,
 .config-list li {
   margin-bottom: 10px;
   line-height: 1.6;
 }
 
-/* PRICE MASTER */
+/* ===============================
+CARDS & VALUE BOXES
+=============================== */
+
+.process-card,
+.value-box {
+  background: #f4f9ff;
+  padding: 22px;
+  border-radius: 12px;
+  height: 100%;
+  text-align: center;
+}
+
+.process-card h6,
+.value-box h6 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.process-card p,
+.value-box p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===============================
+CONSISTENT IMAGE STYLING
+=============================== */
+
+.section-image,
+img.bp-main-image,
+.price-dashboard,
+.image-box img {
+  width: 100%;
+  max-width: 420px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  display: block;
+  margin: auto;
+}
+
+/* ===============================
+PRICE MASTER FLOW
+=============================== */
+
 .price-master-section {
-  padding: 70px 0;
   border-top: 1px solid #eee;
 }
 
@@ -187,66 +208,62 @@ html {
 
 .price-flow .step:last-child {
   border-right: none;
-} 
+}
 
+/* ===============================
+DEMO / HIGHLIGHT BOX
+=============================== */
 
+.demo-focus {
+  background: linear-gradient(135deg, #e6f4ff, #f8fbff);
+  padding: 35px;
+  border-left: 5px solid #0d6efd;
+  border-radius: 12px;
+}
 
+/* ===============================
+SCROLL OFFSET FOR FIXED HEADER
+=============================== */
 
-
-
-
-
-
-
-/* Offset for fixed header when scrolling */
-#customer-master,
-#vendor-master,
+#business-partner,
 #raw-material-master,
 #finished-goods-master,
 #price-master {
-  scroll-margin-top: 130px;   /* adjust based on your header height */
+  scroll-margin-top: 130px;
 }
 
-/* Extra spacing for readability */
-.section-title {
-  margin-bottom: 12px;
-}
+/* ===============================
+RESPONSIVE
+=============================== */
 
-.section-intro {
-  margin-bottom: 18px;
-  line-height: 1.7;
-}
+@media (max-width: 768px) {
+  h1, .display-4 {
+    font-size: 36px;
+  }
 
-.process-block {
-  margin-bottom: 18px;
-}
+  h2, .section-title {
+    font-size: 26px;
+  }
 
-.process-block p,
-.value-box p,
-.demo-focus p {
-  line-height: 1.7;
-}
-
-.price-master-section p {
-  margin-top: 12px;
-  line-height: 1.7;
+  .section-image,
+  img.bp-main-image,
+  .price-dashboard,
+  .image-box img {
+    height: 220px;
+  }
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.section-image {
+  width: 100%;
+  max-width: 420px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  display: block;
+  margin: auto;
+}
