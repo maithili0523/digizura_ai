@@ -1,0 +1,115 @@
+.about-page {
+  padding-top: 90px;
+}
+
+.container {
+  padding: 60px 80px;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #1f2a44;
+}
+
+.about-hero {
+  padding: 60px 80px;
+  background: #f8fbff;
+}
+
+.about-hero h1 {
+  font-size: 44px;
+  margin: 10px 0;
+}
+
+.about-hero p {
+  max-width: 900px;
+  color: #555;
+}
+
+.tag {
+  border: 1px solid #5bbcff;
+  color: #5bbcff;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* ICON */
+.icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* WHY GRID */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  background: #e9f7ff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* TWO COLUMN */
+.two-col {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+}
+
+.points li {
+  margin-bottom: 8px;
+}
+
+.highlight-card {
+  background: #e9f6ff;
+  padding: 24px;
+  border-radius: 14px;
+  border-left: 6px solid #5bbcff;
+}
+
+/* PLATFORM */
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.platform-card {
+  border: 1px solid #dbeafe;
+  padding: 22px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* EXPERTISE */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.expertise-card {
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* VISION */
+.vision {
+  background: #f0f9ff;
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.vision p {
+  max-width: 850px;
+  margin: auto;
+}

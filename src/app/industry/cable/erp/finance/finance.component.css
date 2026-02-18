@@ -1,0 +1,136 @@
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  color: #1f2d3d;
+}
+
+/* HERO */
+.finance-hero {
+  background: #173b6d;
+  color: #fff;
+  padding: 120px 20px 80px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.finance-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.finance-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 760px;
+  margin: auto;
+}
+
+/* CARDS */
+.finance-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+  height: 100%;
+}
+
+.finance-card:hover {
+  transform: translateY(-6px);
+}
+
+.finance-card .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.finance-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.finance-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* SECTIONS */
+.finance-section {
+  padding: 80px 20px;
+}
+
+.finance-section.alt {
+  background: #f7f9fc;
+}
+
+.finance-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0d2a54;
+}
+
+.section-intro {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 18px;
+  max-width: 520px;
+}
+
+.finance-section ul {
+  padding-left: 18px;
+}
+
+.finance-section li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* IMAGE */
+.finance-img {
+  width: 100%;
+  max-width: 360px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ANIMATION */
+.finance-animate {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.finance-animate:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+.finance-animate:active {
+  transform: scale(0.97);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .finance-hero {
+    padding: 100px 20px 60px;
+  }
+
+  .finance-hero h1 {
+    font-size: 32px;
+  }
+
+  .finance-section {
+    text-align: center;
+  }
+
+  .finance-img {
+    margin-top: 25px;
+    max-width: 260px;
+    height: 180px;
+  }
+}

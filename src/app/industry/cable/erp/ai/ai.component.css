@@ -1,0 +1,81 @@
+/* HERO SECTION */
+.ai-hero {
+  background: #173b6d;
+  color: #fff;
+  padding: 120px 20px 80px;
+  margin-top: 80px; /* adjust if header height differs */
+  text-align: center;
+}
+
+.ai-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.ai-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* CARDS SECTION */
+.ai-cards-section {
+  padding: 70px 20px;
+  background: #f7f9fc;
+}
+
+/* CARD STYLE */
+.ai-card {
+  background: #ffffff;
+  padding: 34px 26px;
+  border-radius: 14px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  border: 1px solid #e9eef5;
+  cursor: pointer;
+}
+
+.ai-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.14);
+}
+
+/* ICON */
+.ai-icon {
+  font-size: 42px;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+/* TEXT */
+.ai-card h4 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0d2a54;
+}
+
+.ai-card p {
+  font-size: 15px;
+  color: #5a6a7a;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .ai-hero {
+    padding: 100px 20px 60px;
+  }
+
+  .ai-hero h1 {
+    font-size: 32px;
+  }
+
+  .ai-card {
+    padding: 26px 18px;
+  }
+}

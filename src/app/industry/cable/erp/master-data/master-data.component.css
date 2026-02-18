@@ -1,0 +1,99 @@
+/* GLOBAL FONT */
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  color: #1f2d3d;
+}
+
+/* HERO FIX */
+.mdm-hero {
+  background: #173b6d;
+  color: white;
+  padding: 120px 20px 80px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.mdm-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.mdm-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* SECTIONS */
+.mdm-section {
+  padding: 70px 20px;
+}
+
+.mdm-section.alt {
+  background: #f7f9fc;
+}
+
+.mdm-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #0d2a54;
+}
+
+.mdm-section ul {
+  padding-left: 18px;
+}
+
+.mdm-section li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* IMAGE SIZE */
+.mdm-img {
+  width: 100%;
+  max-width: 340px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* IMAGE ANIMATION */
+.mdm-animate {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.mdm-animate:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+.mdm-animate:active {
+  transform: scale(0.97);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .mdm-hero {
+    padding: 100px 20px 60px;
+  }
+
+  .mdm-hero h1 {
+    font-size: 32px;
+  }
+
+  .mdm-section {
+    text-align: center;
+  }
+
+  .mdm-img {
+    margin-top: 25px;
+    max-width: 260px;
+    height: 180px;
+  }
+}

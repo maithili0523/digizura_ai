@@ -1,0 +1,85 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+
+/* ===== LAYOUT ===== */
+.main-layout {
+  display: flex;
+}
+
+/* LEFT INDUSTRY PANEL */
+.industry-panel {
+  position: fixed;
+  top: 120px;               /* below header */
+  left: 0;
+  width: 240px;
+  height: calc(100vh - 120px);
+  background: #f4f9ff;
+  border-right: 1px solid #d6e7ff;
+  z-index: 1000;
+}
+
+/* PAGE CONTENT */
+.page-content {
+  margin-left: 0;
+  padding: 20px;
+  width: 100%;
+  transition: margin-left 0.3s ease;
+}
+
+.page-content.shifted {
+  margin-left: 260px;      /* panel width + small gap */
+  width: calc(100% - 260px);
+}
+
+/* Small breathing gap from sidebar */
+.page-content .container,
+.page-content section {
+  padding-left: 10px;
+}
+
+/* FOOTER SHIFT */
+app-footer, footer {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  transition: margin-left 0.3s ease;
+}
+
+/* When panel closed */
+body:not(.body-with-panel) app-footer,
+body:not(.body-with-panel) footer {
+  margin-left: 0;
+  width: 100%;
+}
+
+/* REMOVE EXTRA WHITE SPACE */
+.container {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+router-outlet + * {
+  margin-bottom: 0 !important;
+}
+
+
+
+
+
+/* Give gap between industry panel and page content */
+body.body-with-panel .page-content {
+  padding-left: 20px;   /* adjust: 16px / 20px / 24px as you like */
+  transition: padding-left 0.3s ease;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

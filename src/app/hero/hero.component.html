@@ -1,0 +1,26 @@
+<div class="hero">
+  <div class="overlay">
+    <div class="text-slider">
+
+      <div
+        class="slide"
+        *ngFor="let text of texts; let i = index"
+        [class.active]="i === currentIndex"
+      >
+
+        <!-- First slide with CableNXT styling -->
+        <span *ngIf="i === 0">
+          Transforming Business Process
+<span class="cable">Cable</span><span class="nxt">NXT</span>
+        </span>
+
+        <!-- Other slides -->
+        <span *ngIf="i !== 0">
+          {{ text }}
+        </span>
+
+      </div>
+
+    </div>
+  </div>
+</div>

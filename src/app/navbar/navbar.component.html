@@ -1,0 +1,118 @@
+<div class="header-fixed">
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <span></span>
+    <span>✉ central.operations&#64;digizura.com</span>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo" routerLink="/home" (click)="closeAll()">
+  <img src="https://digizura.com/img/log3.png" alt="Digizura Logo" />
+</div>
+
+
+    <!-- MENU -->
+    <div class="menu">
+
+      <!-- INDUSTRY SOLUTION -->
+      <div class="menu-wrapper">
+
+        <span class="menu-link" (click)="toggleIndustry($event)">
+          INDUSTRY SOLUTIONS ▾
+        </span>
+
+        <!-- LEVEL 1 -->
+        <div
+          class="dropdown"
+          *ngIf="showIndustry"
+          (click)="$event.stopPropagation()"
+        >
+
+          <div class="dropdown-item" (click)="toggleCable($event)">
+  <span class="cable-logo">
+    Cable<span class="nxt">NXT</span>
+  </span> ▾ 
+</div>
+
+
+ 
+
+
+
+
+
+
+          <!-- LEVEL 2 -->
+          <div class="horizontal-row" *ngIf="showCable">
+
+            <a class="dropdown-item"
+   routerLink="/cable-maker"
+   (click)="closeAll()">
+  <span class="cable-logo">
+    Cable<span class="nxt">MAKER</span>
+  </span>
+</a>
+
+            <div class="erp-container">
+ <span class="dropdown-item" (click)="toggleErp($event)">
+  ERP for 
+  <span class="cable-logo">
+    Cable<span class="nxt">NXT</span>
+  </span>
+  ▾
+</span>
+
+
+
+
+  <!-- LEVEL 3 -->
+  <div class="erp-list" *ngIf="showErp">
+    <a routerLink="/erp/master-data" (click)="closeAll()">Master Data</a>
+    <a routerLink="/erp/inventory" (click)="closeAll()">Inventory</a>
+    <a routerLink="/erp/dispatch" (click)="closeAll()">Dispatch</a>
+    <a routerLink="/erp/production-planning" (click)="closeAll()">Production Planning</a>
+    <a routerLink="/erp/quality" (click)="closeAll()">Quality</a>
+    <a routerLink="/erp/finance" (click)="closeAll()">Finance</a>
+    <a routerLink="/erp/reports" (click)="closeAll()">Reports</a>
+    <a routerLink="/erp/sales-order" (click)="closeAll()">Sales</a>
+    <a routerLink="/erp/ai" (click)="closeAll()">AI</a>
+  </div>
+</div>
+
+
+          <a class="dropdown-item"
+   routerLink="/ai-for-cable"
+   (click)="closeAll()">
+  
+  <span class="cable-logo">
+    Cable<span class="nxt">NXT</span>
+    AI
+  </span>
+</a>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <a class="menu-link" routerLink="/about" (click)="closeAll()">
+  ABOUT US
+</a>
+
+<a class="menu-link" routerLink="/contact" (click)="closeAll()">
+  CONTACT US
+</a>
+
+    </div>
+
+    <!-- BUTTON -->
+    <button class="demo-btn" routerLink="/demo" (click)="closeAll()">
+  VIEW DEMO
+</button>
+
+  </nav>
+</div>

@@ -1,0 +1,80 @@
+.hero {
+  height: calc(100vh - 80px);
+
+  background-image:
+    linear-gradient(to right, rgba(11,31,58,0.85), rgba(11,31,58,0.2)),
+    url('https://c4.wallpaperflare.com/wallpaper/244/150/511/simple-background-texture-wallpaper-preview.jpg'),
+    url('https://c4.wallpaperflare.com/wallpaper/244/150/511/simple-background-texture-wallpaper-preview.jpg');
+
+  background-position: center, left center, right center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: cover, 50% 100%, 50% 100%;
+}
+
+
+
+.overlay {
+  background: rgba(0, 0, 0, 0.35);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-slider {
+  position: relative;
+  height: 80px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  font-size: 42px;
+  font-weight: 600;
+  color: white;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  font-size: 42px;
+  font-weight: 600;
+  color: white;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.cable {
+  font-weight: 600;   /* same boldness as main text */
+  margin-left: 10px;
+}
+
+.nxt {
+  font-weight: 400;   /* not bold */
+  font-size: 0.7em;   /* smaller than Cable */
+  position: relative;
+  top: -10px;         /* slightly raised */
+  margin-left: 3px;
+}
+

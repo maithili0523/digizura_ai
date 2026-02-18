@@ -1,0 +1,125 @@
+/* HERO */
+.module-hero {
+  background: #173b6d;
+  color: #fff;
+  padding: 120px 20px 80px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.module-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.module-hero p {
+  max-width: 800px;
+  margin: auto;
+  opacity: 0.9;
+  font-size: 17px;
+}
+
+/* INTRO */
+.module-intro {
+  padding: 50px 20px;
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+}
+
+/* SECTION BASE */
+.module-section {
+  padding: 80px 20px;
+}
+
+.module-section.alt {
+  background: #f7f9fc;
+}
+
+/* FLOW CARDS */
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.flow-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.flow-card:hover {
+  transform: translateY(-6px);
+}
+
+.flow-card .icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.flow-card h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+/* SPLIT LAYOUT */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.split.reverse {
+  direction: rtl;
+}
+
+.split.reverse .text,
+.split.reverse .image {
+  direction: ltr;
+}
+
+.split h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #0d2a54;
+}
+
+.split ul {
+  padding-left: 18px;
+}
+
+.split li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* IMAGES */
+.image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .flow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .image img {
+    margin: auto;
+  }
+}

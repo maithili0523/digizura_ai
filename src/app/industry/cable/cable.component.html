@@ -1,0 +1,160 @@
+
+<
+
+
+
+
+<section class="hero">
+
+  <div
+    class="slide"
+    *ngFor="let slide of slides; let i = index"
+    [class.active]="i === currentSlide"
+    [style.backgroundImage]="'url(' + slide.image + ')'"
+  >
+    <div class="overlay">
+      <h1 class="quote">
+
+        <!-- Cable Maker -->
+        <ng-container *ngIf="slide.text === 'Cable Maker'">
+          <span class="cable-logo">
+    Cable<span class="nxt">MAKER</span>
+  </span>
+        </ng-container>
+
+        <!-- ERP for Cable -->
+        <ng-container *ngIf="slide.text === 'ERP for Cable'">
+          ERP for
+          <span class="cable-logo">
+            Cable<span class="nxt">NXT</span>
+          </span>
+        </ng-container>
+
+        <!-- AI for Cable -->
+        <ng-container *ngIf="slide.text === 'AI for Cable'">
+          
+          <span class="cable-logo">
+            Cable<span class="nxt">NXT</span>
+          </span>
+          AI
+        </ng-container>
+
+      </h1>
+    </div>
+  </div>
+
+  <div class="dots">
+    <span
+      *ngFor="let s of slides; let i = index"
+      [class.active]="i === currentSlide"
+      (click)="goToSlide(i)">
+    </span>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HERO -->
+<section class="cablenxt-hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1>CableNXT</h1>
+      <p class="tagline">
+        ERP built specifically for cable manufacturing operations
+      </p>
+      <p class="hero-desc">
+        Streamline sales, planning, production, quality, inventory,
+        and finance in one integrated platform designed for the
+        unique needs of cable manufacturers.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- OVERVIEW -->
+<section class="cablenxt-overview">
+  <div class="container">
+    <h2>One Platform for Complete Operational Control</h2>
+    <p class="section-desc">
+      CableNXT connects every department into a single, easy-to-use ERP
+      system. Eliminate manual processes, improve production accuracy,
+      and gain real-time visibility across your entire factory.
+    </p>
+  </div>
+</section>
+
+
+
+<!-- FEATURES -->
+<section class="cablenxt-features">
+  <div class="container">
+    <h2>Key Capabilities</h2>
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="icon">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h3>Industry-Specific ERP</h3>
+        <p>Designed exclusively for cable manufacturing workflows.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Real-Time Visibility</h3>
+        <p>Track orders, production, and inventory instantly.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">
+          <i class="fas fa-industry"></i>
+        </div>
+        <h3>Smart Production Planning</h3>
+        <p>Optimize scheduling and machine utilization.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Integrated Quality Control</h3>
+        <p>Ensure consistent quality with built-in testing workflows.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">
+          <i class="fas fa-coins"></i>
+        </div>
+        <h3>Accurate Costing</h3>
+        <p>Track production costs and financial performance.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">
+          <i class="fas fa-desktop"></i>
+        </div>
+        <h3>User-Friendly Interface</h3>
+        <p>Modern, intuitive design for faster adoption.</p>
+      </div>
+
+    </div>
+  </div>
+</section>

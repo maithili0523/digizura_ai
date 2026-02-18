@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+/* Apply same color to entire footer area */
+footer,
+.footer,
+.map-header,
+.footer-map,
+.footer-bottom {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: #f3f3f3;
+}
+
+/* Header section */
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 30px;   /* reduced padding */
+  box-sizing: border-box;
+}
+
+.title-main {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0b2b5e;
+}
+
+.title-sub {
+  font-size: 13px;
+  color: #555;
+  margin-top: 2px;
+}
+
+.map-logo img {
+  height: 36px;
+  width: auto;
+}
+
+/* Map section */
+.footer-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;      /* smaller gap above/below map */
+}
+
+.footer-map img {
+  height: 300px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Bottom footer text */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  padding: 6px 0;       /* reduced bottom gap */
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  color: #000;
+}
+
+.footer-bottom span,
+.separator {
+  color: #000;
+}

@@ -1,0 +1,9 @@
+{
+  "outputDirectory": "dist/digizura/browser",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+.app-wrapper {
+  transition: margin-left 0.3s ease;
+}
+
+body.body-with-panel .app-wrapper {
+  margin-left: 240px;   /* same width as industry panel */
+}
+
+.main-layout {
+  margin-top: 88px;
+}
