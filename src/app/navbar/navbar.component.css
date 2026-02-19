@@ -188,3 +188,52 @@ body {
   margin-left: 1px;
   color: var(--navy);
 }
+
+
+
+
+
+
+
+
+/* MOBILE ONLY: force everything into one line */
+@media (max-width: 768px) {
+
+  .header-fixed {
+    height: auto;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+    height: auto;
+  }
+
+  /* Smaller logo */
+  .logo img {
+    height: 26px;
+    top: 0;
+  }
+
+  /* Menu tighter */
+  .menu {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .menu-link {
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+  /* Demo button same size as menu */
+  .demo-btn {
+    font-size: 10px;
+    padding: 3px 6px;
+    margin: 0;
+    white-space: nowrap;
+  }
+}

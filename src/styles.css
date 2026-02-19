@@ -2,6 +2,99 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+/* CLEAN SINGLE MOBILE HEADER */
+@media (max-width: 768px) {
+
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Header layout */
+  header,
+  .header,
+  .navbar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 8px 10px !important;
+    background: white;
+  }
+
+  /* Logo */
+  header img,
+  .logo img {
+    height: 30px !important;
+    margin-bottom: 6px;
+  }
+
+  /* Navigation row below logo */
+  nav,
+  .menu,
+  .nav-links {
+    display: flex !important;
+    justify-content: space-around !important;
+    width: 100% !important;
+    margin-bottom: 8px;
+  }
+
+  nav a,
+  .menu a,
+  .nav-links a {
+    font-size: 12px !important;
+    white-space: nowrap;
+  }
+
+  /* Demo button below menu */
+  .btn,
+  button {
+    display: block !important;
+    margin: 6px auto !important;
+    font-size: 12px !important;
+    padding: 6px 10px !important;
+  }
+
+  /* Hero spacing */
+  .hero,
+  .hero-section,
+  .banner {
+    padding-top: 20px !important;
+    text-align: center;
+  }
+
+  /* Hero text */
+  .hero h1,
+  .banner h1 {
+    font-size: 22px !important;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 13px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 html, body {
   margin: 0;
