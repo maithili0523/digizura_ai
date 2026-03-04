@@ -26,6 +26,19 @@ import { BatchGenealogyComponent } from './pages/nxt/batch-genealogy/batch-genea
 
 import { CableAiComponent } from './pages/cable-ai/cable-ai.component';
 
+  import { SigninComponent } from './pages/signin/signin.component';
+import { SignupComponent } from './pages/signup/signup.component';
+
+import { CommunityComponent } from './pages/community/community.component';
+import { PricingComponent } from './pages/pricing/pricing.component';
+import { HelpComponent } from './pages/help/help.component';
+
+  import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+
+
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+
+
 export const routes: Routes = [
   { path: 'home', component: HeroComponent },
 
@@ -54,8 +67,20 @@ export const routes: Routes = [
 
   { path: 'cable-ai', component: CableAiComponent },
 
-  
+  { path: 'community', component: CommunityComponent },
+{ path: 'pricing', component: PricingComponent },
+{ path: 'help', component: HelpComponent },
+
+
   { path: 'demo', component: DemoComponent },
+
+  { path: 'signin', component: SigninComponent },
+  { path: 'signup', component: SignupComponent },
+
+{ path: 'reset-password', component: ResetPasswordComponent },
+
+
+{ path: 'dashboard', component: DashboardComponent },
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' }

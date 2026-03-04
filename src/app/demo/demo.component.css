@@ -42,7 +42,7 @@
 
 /* CARD TITLE */
 .demo-card h3 {
-  color: #0b2a5b;
+  color:  #2F5DA8;
   margin-bottom: 15px;
 }
 
@@ -54,7 +54,7 @@
 
 /* BUTTON */
 .demo-card button {
-  background: #0b2a5b;
+  background: #2F5DA8;
   color: white;
   border: none;
   padding: 12px 0;
@@ -67,7 +67,7 @@
 }
 
 .demo-card button:hover {
-  background: #082047;
+  background: #2F5DA8;
 }
 
 /* POPUP OVERLAY */
@@ -107,14 +107,14 @@
   margin: 5px;
   padding: 10px 15px;
   border: none;
-  background: #0b2a5b;
+  background: #2F5DA8;
   color: white;
   cursor: pointer;
   border-radius: 4px;
 }
 
 .popup button:hover {
-  background: #082047;
+  background:  #2F5DA8;
 }
 
 /* CLOSE BUTTON */

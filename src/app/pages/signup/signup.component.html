@@ -1,0 +1,83 @@
+<section class="signin-wrapper">
+
+  <div class="signin-card">
+
+    <!-- Logo -->
+    <a routerLink="/home" class="logo-link">
+      <img src="https://digizura.com/img/log3.png" alt="Digizura Logo">
+    </a>
+
+    <h2 class="signin-title">Create  account</h2>
+
+    <form [formGroup]="signupForm" (ngSubmit)="signup()">
+
+      <!-- EMAIL -->
+      <div class="input-group">
+
+        <label>Email</label>
+
+        <input
+        type="email"
+        formControlName="email"
+        placeholder="Enter your email">
+
+        <small class="error"
+        *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.invalid">
+
+          <span *ngIf="signupForm.get('email')?.errors?.['required']">
+            Email is required
+          </span>
+
+          <span *ngIf="signupForm.get('email')?.errors?.['email']">
+            Enter a valid email
+          </span>
+
+        </small>
+
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="input-group">
+
+        <label>Password</label>
+
+        <input
+        type="password"
+        formControlName="password"
+        placeholder="Create a password">
+
+        <small class="error"
+        *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.invalid">
+
+          <span *ngIf="signupForm.get('password')?.errors?.['required']">
+            Password is required
+          </span>
+
+          <span *ngIf="signupForm.get('password')?.errors?.['minlength']">
+            Minimum 6 characters required
+          </span>
+
+        </small>
+
+      </div>
+
+      <!-- BUTTON -->
+      <button
+      type="submit"
+      class="signin-btn"
+      [disabled]="signupForm.invalid">
+
+        Create Account
+
+      </button>
+
+    </form>
+
+    <p class="signup-link">
+      Already have an account?
+      <a routerLink="/signin">Sign in</a>
+    </p>
+
+  </div>
+
+</section>

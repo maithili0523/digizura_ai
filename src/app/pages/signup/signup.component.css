@@ -1,0 +1,73 @@
+.signin-wrapper{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#f7f8fb;
+}
+
+.signin-card{
+width:420px;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.logo-link img{
+width:150px;
+margin-bottom:20px;
+}
+
+.signin-title{
+font-family:'Playfair Display', serif;
+font-size:30px;
+color:#2F5DA8;
+margin-bottom:20px;
+}
+
+.input-group{
+text-align:left;
+margin-bottom:18px;
+}
+
+.input-group label{
+display:block;
+margin-bottom:6px;
+}
+
+.input-group input{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+.signin-btn{
+width:100%;
+padding:12px;
+background:#2F5DA8;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.signin-btn:disabled{
+background:#9aa8c4;
+}
+
+.error{
+color:red;
+font-size:12px;
+}
+
+.signup-link{
+margin-top:20px;
+}
+
+.signup-link a{
+color:#2F5DA8;
+text-decoration:none;
+}

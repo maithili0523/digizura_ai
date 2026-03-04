@@ -4,6 +4,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeroComponent } from './hero/hero.component'; 
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,7 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     FooterComponent,
     HeroComponent,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
