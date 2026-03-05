@@ -1,34 +1,36 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [
+    CommonModule,
+    RouterModule,
+    LucideAngularModule
+  ],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
 
-  isMenuOpen = false;      // CableMaker
-  isNxtMenuOpen = false;   // CableNXT
+  isMenuOpen = false;
+  isNxtMenuOpen = false;
 
-  // Toggle CableMaker
   toggleMenu(event: Event) {
-    event.stopPropagation(); // 🔥 Important
+    event.stopPropagation();
     this.isMenuOpen = !this.isMenuOpen;
-    this.isNxtMenuOpen = false; // Close CableNXT
+    this.isNxtMenuOpen = false;
   }
 
-  // Toggle CableNXT
   toggleNxtMenu(event: Event) {
-    event.stopPropagation(); // 🔥 Important
+    event.stopPropagation();
     this.isNxtMenuOpen = !this.isNxtMenuOpen;
-    this.isMenuOpen = false; // Close CableMaker
+    this.isMenuOpen = false;
   }
 
-  // Close when clicking outside
   @HostListener('document:click')
   closeAllMenus() {
     this.isMenuOpen = false;

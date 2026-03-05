@@ -61,6 +61,36 @@
   color: #555;
 }
 
+.hero-title,
+.hero-subtitle {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  color: #2F5DA8;
+}
+
+.hero-title {
+  font-size: 54px;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 34px;
+  margin-top: 10px;
+}
+
+/* Highlight colors */
+
+.highlight-yellow {
+  color: #2F5DA8;
+  font-weight: 700;
+}
+
+.highlight-blue {
+  color: #2F5DA8;
+  font-weight: 700;
+}
+
+
 /* Highlight Brush */
 .highlight-yellow,
 .highlight-blue {

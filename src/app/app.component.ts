@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { HeroComponent } from './hero/hero.component'; 
+import { HeroComponent } from './hero/hero.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,7 +22,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class AppComponent {
 
-
   showIndustryPanel = false;
 
   onIndustryToggle(open: boolean) {
@@ -33,4 +33,5 @@ export class AppComponent {
       document.body.classList.remove('body-with-panel');
     }
   }
+
 }

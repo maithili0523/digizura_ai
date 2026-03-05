@@ -24,6 +24,8 @@
   cursor: pointer;
 }
 
+/* ================= CENTER NAV ================= */
+
 .nav-center {
   display: flex;
   align-items: center;
@@ -68,24 +70,27 @@
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.demo-btn:hover {
+  background: #234a87;
 }
 
 /* ================= FULL SCREEN MEGA MENU ================= */
 
 .mega-menu {
   position: fixed;
-  top: 75px; /* height of navbar */
+  top: 75px;
   left: 0;
   width: 100vw;
   height: calc(100vh - 75px);
-  background: #f4f5f7;
+  background: linear-gradient(180deg,#ffffff,#f7f8fb);
   z-index: 999;
   overflow-y: auto;
   padding-top: 80px;
   animation: fadeIn 0.25s ease;
 }
-
-/* Center content */
 
 .mega-container {
   max-width: 1200px;
@@ -98,17 +103,18 @@
 .mega-col {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   min-width: 200px;
 }
 
 .mega-col h4 {
   font-size: 14px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 
-/* Colored lines */
+/* Colored divider */
 
 .op::after,
 .inv::after,
@@ -116,8 +122,8 @@
 .plat::after {
   content: "";
   display: block;
-  width: 120px;
-  height: 1px;
+  width: 200px;
+  height: 2px;
   margin-top: 6px;
 }
 
@@ -126,16 +132,22 @@
 .bus::after { background: #f39c12; }
 .plat::after { background: #3498db; }
 
+/* Links */
+
 .mega-col a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   font-size: 14px;
-  transition: 0.2s ease;
+  padding: 6px 4px;
+  border-radius: 6px;
+  transition: all .25s ease;
 }
 
 .mega-col a:hover {
-  color: #7b4bb7;
+  background:#f5f7fb;
+  color:#2F5DA8;
+  transform: translateX(5px);
 }
 
 /* ================= HANDWRITTEN EXPLORE ================= */
@@ -153,8 +165,6 @@
   z-index: 1;
   color: #111;
 }
-
-/* Brush Stroke */
 
 .mega-highlight-text::before {
   content: "";
@@ -182,39 +192,6 @@
   transform: rotate(2deg);
 }
 
-/* ================= Animation ================= */
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ================= CABLE NXT FULL SCREEN DROPDOWN ================= */
 
 .cablenxt-dropdown {
@@ -223,100 +200,124 @@
   left: 0;
   width: 100vw;
   height: calc(100vh - 75px);
-  background: #ffffff;
-  padding: 80px 120px; /* reduced spacing */
+  background: linear-gradient(180deg,#ffffff,#f7f8fb);
+  padding: 80px 120px;
   z-index: 999;
   overflow-y: auto;
   animation: fadeIn 0.25s ease;
 }
 
-/* ================= GRID LAYOUT (SIDE BY SIDE) ================= */
+/* ================= GRID LAYOUT ================= */
 
 .dropdown-container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 equal columns */
+  grid-template-columns: 1fr 1fr;
   column-gap: 120px;
   row-gap: 40px;
 }
 
-/* ================= SECTION BLOCK ================= */
+/* ================= COLUMN ================= */
 
 .dropdown-column {
   display: flex;
   flex-direction: column;
 }
 
-/* ================= SECTION TITLE ================= */
+/* ================= TITLE ================= */
 
 .dropdown-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 1px;
+  text-transform: uppercase;
   margin-bottom: 18px;
   position: relative;
   padding-bottom: 10px;
 }
 
-/* Colored underline */
+/* colored underline */
 
 .dropdown-title::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 90%;          /* FIXED (was 300px) */
-  height: 1px;
+  width: 90%;
+  height: 2px;
 }
 
 .intelligence::after { background: #00b894; }
-.domain::after       { background: #2F5DA8; }
+.domain::after { background: #2F5DA8; }
 
-/* ================= LIST STYLE ================= */
+/* ================= LIST ================= */
 
 .dropdown-column ul {
   list-style: none;
   padding: 0;
   margin: 0;
-
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
-/* ================= ITEMS ================= */
+/* ================= MENU ITEMS ================= */
 
 .dropdown-column li {
   font-size: 15px;
   color: #444;
   cursor: pointer;
-  transition: 0.25s ease;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: all .25s cubic-bezier(.4,0,.2,1);
 }
 
 .dropdown-column li:hover {
-  color: #7b4bb7;
-  transform: translateX(4px);
+  background:#f5f7fb;
+  color:#2F5DA8;
+  transform: translateX(6px);
 }
 
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
+
   .dropdown-container {
-    grid-template-columns: 1fr; /* stack on mobile */
+    grid-template-columns: 1fr;
     row-gap: 50px;
   }
 
   .cablenxt-dropdown {
     padding: 60px 40px;
   }
+
 }
 
 /* ================= ANIMATION ================= */
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity:0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+.mega-col a,
+.dropdown-column li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+lucide-icon{
+  width:18px;
+  height:18px;
+  color:#2F5DA8;
 }

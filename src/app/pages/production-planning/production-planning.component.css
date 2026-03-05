@@ -8,12 +8,7 @@
 
 .hero {
   padding: 80px 0 40px;
-  margin-top: 40px;   /* 👈 add this */
-  text-align: center;
-}
-
-.hero {
-  padding: 80px 0 40px;   /* reduced from 120/80 */
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -21,28 +16,43 @@
   --brand-primary: #2F5DA8;
 }
 
+/* Global Text Color */
+body {
+  color: #000;
+}
+
 /* Global Heading Font */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif !important;
-  color: var(--brand-primary);
+  color: #000;
 }
 
 .hero-title {
-  font-family: 'Caveat', cursive;
+  font-family: 'Poppins', sans-serif !important;
   font-size: 54px;
   margin-bottom: 15px;
+  color: #000;
 }
 
 .hero-description {
   margin-top: 10px;
   font-size: 18px;
-  color: #555;
+  color: #000;
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
 }
+.hero-title {
+  font-family: 'Caveat', cursive;
+  font-size: 54px;
+  font-weight: 700;
+  color: #2F5DA8;
+  margin-bottom: 15px;
+}
+
 
 /* Highlight */
+
 .highlight-primary {
   position: relative;
   z-index: 1;
@@ -59,13 +69,11 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
   border-radius: 8px;
 }
-.hero-title {
-  font-family: 'Poppins', sans-serif !important;
-}
+
 /* ================= SECTIONS ================= */
 
 .pp-section {
-  padding: 60px 0;   /* reduced from 100px */
+  padding: 60px 0;
 }
 
 .pp-section.light {
@@ -75,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 .row {
   display: flex;
   align-items: center;
-  gap: 40px;   /* reduced from 60 */
+  gap: 40px;
 }
 
 .row.reverse {
@@ -99,18 +107,20 @@ h1, h2, h3, h4, h5, h6 {
 .text h2 {
   font-size: 30px;
   margin-bottom: 15px;
+  color: #000;
 }
 
 .text p {
   font-size: 17px;
   line-height: 1.6;
-  color: #2F5DA8;
-  margin-bottom: 10px;   /* reduced */
+  color: #000;
+  margin-bottom: 10px;
 }
 
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
+
   .row {
     flex-direction: column;
     text-align: center;
@@ -120,4 +130,5 @@ h1, h2, h3, h4, h5, h6 {
   .row.reverse {
     flex-direction: column;
   }
+
 }

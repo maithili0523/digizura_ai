@@ -2,16 +2,53 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
+import { importProvidersFrom } from '@angular/core';
+
 import { AppComponent } from './app/app.component';
 import { routes } from './app/app.routes';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
+/* Lucide Icons */
+import {
+  LucideAngularModule,
+  Settings,
+  ShieldCheck,
+  Package,
+  Handshake,
+  Wallet,
+  Building2,
+  BarChart3,
+  FlaskConical,
+  TrendingDown,
+  LayoutDashboard,
+  Database,
+  GitBranch,
+  Factory,
+  Link
+} from 'lucide-angular';
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
-    provideAnimations(), provideAnimationsAsync(),provideHttpClient()
+    provideAnimations(),
+    provideHttpClient(),
+
+    importProvidersFrom(
+      LucideAngularModule.pick({
+        Settings,
+        ShieldCheck,
+        Package,
+        Handshake,
+        Wallet,
+        Building2,
+        BarChart3,
+        FlaskConical,
+        TrendingDown,
+        LayoutDashboard,
+        Database,
+        GitBranch,
+        Factory,
+        Link
+      })
+    )
   ]
-});
-
-
-
+}).catch(err => console.error(err));
