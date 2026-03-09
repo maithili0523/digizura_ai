@@ -1,0 +1,60 @@
+<div class="banner-slider">
+  <div
+    class="slides"
+    [style.transform]="'translateX(-' + currentSlide * 100 + '%)'"
+    [style.transition]="transition"
+  >
+    <img src="assets/banner1.png">
+    <img src="assets/banner2.png">
+    <img src="assets/banner3.png">
+    <img src="assets/banner4.png">
+    <img src="assets/banner5.png">
+
+    <!-- duplicate first slide -->
+    <img src="assets/banner1.png">
+  </div>
+</div>
+
+<div class="modules-grid">
+
+  <div class="module-card" (dblclick)="goToPage('/master-data')">
+    <lucide-icon name="database"></lucide-icon>
+    <span>Master Data Management</span>
+  </div>
+
+  <div class="module-card" (dblclick)="goToPage('/inventory')">
+    <lucide-icon name="package"></lucide-icon>
+    <span>Inventory & Warehouse</span>
+  </div>
+
+  <div class="module-card" (dblclick)="goToPage('/sales-orders')">
+    <lucide-icon name="shopping-cart"></lucide-icon>
+    <span>Sales Order Management</span>
+  </div>
+
+  <div class="module-card" (dblclick)="goToPage('/dispatch')">
+    <lucide-icon name="truck"></lucide-icon>
+    <span>Dispatch & Logistics</span>
+  </div>
+
+  <div class="module-card" (dblclick)="goToPage('/production-planning')">
+    <lucide-icon name="settings"></lucide-icon>
+    <span>Production Planning</span>
+  </div>
+
+  <div class="module-card" (dblclick)="goToPage('/finance-costing')">
+    <lucide-icon name="wallet"></lucide-icon>
+    <span>Finance & Costing</span>
+  </div>
+
+  <div class="module-card" (dblclick)="goToPage('/reports-dashboards')">
+    <lucide-icon name="bar-chart-3"></lucide-icon>
+    <span>Reports & Dashboards</span>
+  </div>
+
+  <div class="module-card" (dblclick)="goToPage('/quality-management')">
+    <lucide-icon name="shield-check"></lucide-icon>
+    <span>Quality Management</span>
+  </div>
+
+</div>

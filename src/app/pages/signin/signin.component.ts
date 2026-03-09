@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -15,58 +16,67 @@ export class SigninComponent {
 
   signinForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private http: HttpClient
+  ) {
 
     this.signinForm = this.fb.group({
-      email:['',[Validators.required,Validators.email]],
-      password:['',[Validators.required]]
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]]
     });
 
   }
 
-  // ================= LOGIN =================
+  /* ================= LOGIN ================= */
 
-  onSubmit(){
+  onSubmit() {
 
-    if(this.signinForm.invalid) return;
+    if (this.signinForm.invalid) return;
 
-    const { email, password } = this.signinForm.value;
+    const user = this.signinForm.value;
 
-    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    this.http.post('http://localhost:5000/api/signin', user)
+      .subscribe((res: any) => {
 
-    const user = users.find((u:any) => u.email === email);
+        if (res.message === "Invalid email or password") {
 
-    if(!user){
-      Swal.fire({
-        icon:'warning',
-        text:'Please sign up before signing in'
+          Swal.fire({
+            icon: 'error',
+            text: 'Invalid email or password'
+          });
+
+          return;
+        }
+
+        // ⭐ Save login state
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('userEmail', user.email);
+
+        Swal.fire({
+  icon: 'success',
+  text: 'Login successful'
+}).then(() => {
+
+  this.router.navigateByUrl('/dashboard');
+
+});
+
+      }, error => {
+
+        Swal.fire({
+          icon: 'error',
+          text: 'Server error. Please try again.'
+        });
+
       });
-      return;
-    }
-
-    if(user.password !== password){
-      Swal.fire({
-        icon:'error',
-        text:'Invalid password'
-      });
-      return;
-    }
-
-    localStorage.setItem('isLoggedIn','true');
-    localStorage.setItem('userEmail', email);
-
-    Swal.fire({
-      icon:'success',
-      text:'Login successful'
-    }).then(()=>{
-      this.router.navigate(['/dashboard']);
-    });
 
   }
 
-  // ================= RESET PASSWORD =================
+  /* ================= RESET PASSWORD ================= */
 
-  resetPassword(){
+  resetPassword() {
 
     Swal.fire({
       title: 'Enter your registered email',
@@ -74,44 +84,44 @@ export class SigninComponent {
       inputPlaceholder: 'Enter your email',
       confirmButtonText: 'Next',
       showCancelButton: true
-    }).then((emailResult)=>{
+    }).then((emailResult) => {
 
-      if(!emailResult.value) return;
-
-      const users = JSON.parse(localStorage.getItem('users') || '[]');
-
-      const user = users.find((u:any)=>u.email === emailResult.value);
-
-      if(!user){
-        Swal.fire({
-          icon:'error',
-          text:'Email not found. Please sign up first.'
-        });
-        return;
-      }
+      if (!emailResult.value) return;
 
       Swal.fire({
-        title:'Enter new password',
-        input:'password',
-        inputPlaceholder:'New password',
-        confirmButtonText:'Update'
-      }).then((passResult)=>{
+        title: 'Enter new password',
+        input: 'password',
+        inputPlaceholder: 'New password',
+        confirmButtonText: 'Update'
+      }).then((passResult) => {
 
-        if(!passResult.value){
+        if (!passResult.value) {
+
           Swal.fire({
-            icon:'error',
-            text:'Password cannot be empty'
+            icon: 'error',
+            text: 'Password cannot be empty'
           });
+
           return;
         }
 
-        user.password = passResult.value;
+        this.http.post('http://localhost:5000/api/reset-password', {
+          email: emailResult.value,
+          password: passResult.value
+        }).subscribe((res: any) => {
 
-        localStorage.setItem('users', JSON.stringify(users));
+          Swal.fire({
+            icon: 'success',
+            text: 'Password updated successfully. Please sign in.'
+          });
 
-        Swal.fire({
-          icon:'success',
-          text:'Password updated successfully. Please sign in.'
+        }, error => {
+
+          Swal.fire({
+            icon: 'error',
+            text: 'Failed to update password'
+          });
+
         });
 
       });

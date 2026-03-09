@@ -23,7 +23,9 @@ import {
   Database,
   GitBranch,
   Factory,
-  Link
+  Link,
+  ShoppingCart,   // ADD
+  Truck 
 } from 'lucide-angular';
 
 bootstrapApplication(AppComponent, {
@@ -47,7 +49,9 @@ bootstrapApplication(AppComponent, {
         Database,
         GitBranch,
         Factory,
-        Link
+        Link,
+        ShoppingCart,   // ADD
+  Truck 
       })
     )
   ]

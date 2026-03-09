@@ -1,13 +1,16 @@
 import { Routes } from '@angular/router';
 import { HeroComponent } from './hero/hero.component';
 import { DemoComponent } from './demo/demo.component';
-
-import { ProductionPlanningComponent } from './pages/production-planning/production-planning.component';
 import { QualityComponent } from './pages/quality/quality.component';
 import { WarehouseComponent } from './pages/warehouse/warehouse.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { FinanceComponent } from './pages/finance/finance.component';
 import { MultiPlantComponent } from './pages/multi-plant/multi-plant.component';
+
+import { CablemakerComponent } from './cablemaker/cablemaker.component';
+import { CablenxtComponent } from './cablenxt/cablenxt.component';
+
+
 
 // ================= CABLE NXT =================
 
@@ -39,6 +42,16 @@ import { HelpComponent } from './pages/help/help.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
+
+
+import { MasterDataComponent } from './pages/master-data/master-data.component';
+import { InventoryComponent } from './pages/inventory/inventory.component';
+import { SalesOrdersComponent } from './pages/sales-orders/sales-orders.component';
+import { DispatchComponent } from './pages/dispatch/dispatch.component';
+import { FinanceCostingComponent } from './pages/finance-costing/finance-costing.component';
+import { ReportsDashboardsComponent } from './pages/reports-dashboards/reports-dashboards.component';
+import { QualityManagementComponent } from './pages/quality-management/quality-management.component';
+import { ProductionPlanningComponent } from './pages/production-planning/production-planning.component';
 export const routes: Routes = [
   { path: 'home', component: HeroComponent },
 
@@ -49,6 +62,12 @@ export const routes: Routes = [
   { path: 'cm/orders', component: OrdersComponent },
   { path: 'cm/finance', component: FinanceComponent },
   { path: 'cm/multi-plant', component: MultiPlantComponent },
+
+
+
+   { path: 'cablemaker', component: CablemakerComponent },
+
+  { path: 'cablenxt', component: CablenxtComponent },
 
   // ================= CABLE NXT =================
 
@@ -81,6 +100,23 @@ export const routes: Routes = [
 
 
 { path: 'dashboard', component: DashboardComponent },
+
+
+
+
+
+{ path: 'master-data', component: MasterDataComponent },
+{ path: 'inventory', component: InventoryComponent },
+{ path: 'sales-orders', component: SalesOrdersComponent },
+{ path: 'dispatch', component: DispatchComponent },
+{ path: 'production-planning', component: ProductionPlanningComponent },
+{ path: 'finance-costing', component: FinanceCostingComponent },
+{ path: 'reports-dashboards', component: ReportsDashboardsComponent },
+{ path: 'quality-management', component: QualityManagementComponent },
+
+
+
+
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home' }

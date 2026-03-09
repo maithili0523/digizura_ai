@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -15,7 +16,11 @@ export class ResetPasswordComponent {
 
   resetForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private http: HttpClient
+  ) {
 
     this.resetForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -27,37 +32,35 @@ export class ResetPasswordComponent {
   resetPassword() {
 
     if (this.resetForm.invalid) {
+
       Swal.fire({
         icon: 'warning',
         text: 'Please enter a valid email and password'
       });
+
       return;
     }
 
-    const { email, password } = this.resetForm.value;
+    const data = this.resetForm.value;
 
-    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    this.http.post('http://localhost:5000/api/reset-password', data)
+      .subscribe((res: any) => {
 
-    const user = users.find((u: any) => u.email === email);
+        Swal.fire({
+          icon: 'success',
+          text: 'Password updated successfully'
+        }).then(() => {
+          this.router.navigate(['/signin']);
+        });
 
-    if (!user) {
-      Swal.fire({
-        icon: 'error',
-        text: 'Email not found. Please sign up first.'
+      }, error => {
+
+        Swal.fire({
+          icon: 'error',
+          text: 'Failed to update password'
+        });
+
       });
-      return;
-    }
-
-    user.password = password;
-
-    localStorage.setItem('users', JSON.stringify(users));
-
-    Swal.fire({
-      icon: 'success',
-      text: 'Password updated successfully'
-    }).then(() => {
-      this.router.navigate(['/signin']);
-    });
 
   }
 

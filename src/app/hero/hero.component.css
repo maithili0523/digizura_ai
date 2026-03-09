@@ -1,20 +1,14 @@
 .hero {
   height: calc(100vh - 80px);
-
-  background-image:
-    linear-gradient(to right, rgba(11,31,58,0.85), rgba(11,31,58,0.2)),
-    url('https://c4.wallpaperflare.com/wallpaper/244/150/511/simple-background-texture-wallpaper-preview.jpg'),
-    url('https://c4.wallpaperflare.com/wallpaper/244/150/511/simple-background-texture-wallpaper-preview.jpg');
-
-  background-position: center, left center, right center;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: cover, 50% 100%, 50% 100%;
+  background-image: url('/assets/images/hero-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-
-
+/* overlay for slight text readability */
 .overlay {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.15);
   width: 100%;
   height: 100%;
   display: flex;
@@ -22,6 +16,7 @@
   justify-content: center;
 }
 
+/* text slider container */
 .text-slider {
   position: relative;
   height: 80px;
@@ -30,17 +25,7 @@
   overflow: hidden;
 }
 
-.slide {
-  position: absolute;
-  width: 100%;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 0.8s ease, opacity 0.8s ease;
-  font-size: 42px;
-  font-weight: 600;
-  color: white;
-}
-
+/* slide text */
 .slide {
   position: absolute;
   width: 100%;
@@ -51,30 +36,26 @@
   transition: transform 0.8s ease, opacity 0.8s ease;
   font-size: 42px;
   font-weight: 600;
-  color: white;
+  color: rgb(8, 8, 8);
 }
 
+/* active slide */
 .slide.active {
   opacity: 1;
   transform: translate(0, -50%);
 }
 
-
-
-.slide.active {
-  opacity: 1;
-  transform: translateX(0);
-}
+/* Cable text */
 .cable {
-  font-weight: 600;   /* same boldness as main text */
+  font-weight: 600;
   margin-left: 10px;
 }
 
+/* NXT styling */
 .nxt {
-  font-weight: 400;   /* not bold */
-  font-size: 0.7em;   /* smaller than Cable */
+  font-weight: 400;
+  font-size: 0.7em;
   position: relative;
-  top: -10px;         /* slightly raised */
+  top: -10px;
   margin-left: 3px;
 }
-

@@ -2,179 +2,63 @@
 
   <nav class="navbar">
 
-    <!-- LEFT -->
-    <div class="nav-left">
-      <div class="logo" routerLink="/home">
-        <img src="https://digizura.com/img/log3.png" alt="Digizura Logo" />
-      </div>
+<!-- LEFT -->
+<div class="nav-left">
+  <div class="logo" routerLink="/home">
+    <img src="https://digizura.com/img/log3.png" alt="Digizura Logo"/>
+  </div>
+</div>
+
+<!-- CENTER -->
+<div class="nav-center">
+<a routerLink="/cablemaker" class="menu-link">CableMaker</a>
+
+<a routerLink="/cablenxt" class="menu-link">CableNXT</a>
+  <a routerLink="/cable-ai" class="menu-link">Cable.AI</a>
+  <a routerLink="/community" class="menu-link">Community</a>
+  <a routerLink="/pricing" class="menu-link">Pricing</a>
+  <a routerLink="/help" class="menu-link">Help</a>
+
+</div>
+
+<!-- RIGHT -->
+<div class="nav-right">
+
+  <button routerLink="/demo" class="demo-btn">
+    Try Demo
+  </button>
+
+  <!-- Sign In -->
+  <a *ngIf="!isLoggedIn"
+     routerLink="/signin"
+     class="menu-link">
+     Sign In
+  </a>
+
+  <!-- Profile -->
+  <div class="profile-menu" *ngIf="isLoggedIn">
+
+    <div class="avatar"
+         (click)="toggleProfileMenu($event)">
+         {{ userInitial }}
     </div>
 
-    <!-- CENTER -->
-    <div class="nav-center">
+    <div class="dropdown" *ngIf="menuOpen">
 
-      <div class="menu-wrapper">
-        <a class="menu-link" (click)="toggleMenu($event)">
-          CableMaker
-        </a>
-      </div>
+      <a routerLink="/dashboard">
+        My Account
+      </a>
 
-      <div class="menu-wrapper">
-        <a class="menu-link" (click)="toggleNxtMenu($event)">
-          CableNXT
-        </a>
-      </div>
-
-      <a routerLink="/cable-ai" class="menu-link">Cable.AI</a>
-      <a routerLink="/community" class="menu-link">Community</a>
-      <a routerLink="/pricing" class="menu-link">Pricing</a>
-      <a routerLink="/help" class="menu-link">Help</a>
+      <a (click)="logout()">
+        Logout
+      </a>
 
     </div>
 
-    <!-- RIGHT -->
-    <div class="nav-right">
-      <a routerLink="/signin" class="signin-link">Sign In</a>
-      <button routerLink="/demo" class="demo-btn">Try Demo</button>
-    </div>
+  </div>
+
+</div>
 
   </nav>
-
-
-  <!-- ================= CableMaker Dropdown ================= -->
-
-  <div class="mega-menu" *ngIf="isMenuOpen">
-
-    <div class="mega-container">
-
-      <!-- OPERATIONS -->
-      <div class="mega-col">
-        <h4 class="op">OPERATIONS</h4>
-
-        <a routerLink="/cm/production-planning">
-          <lucide-icon name="settings"></lucide-icon>
-          Production Planning
-        </a>
-
-        <a routerLink="/cm/quality">
-          <lucide-icon name="shield-check"></lucide-icon>
-          Quality Assurance
-        </a>
-      </div>
-
-
-      <!-- INVENTORY -->
-      <div class="mega-col">
-        <h4 class="inv">INVENTORY</h4>
-
-        <a routerLink="/cm/warehouse">
-          <lucide-icon name="package"></lucide-icon>
-          Warehouse Management
-        </a>
-      </div>
-
-
-      <!-- BUSINESS -->
-      <div class="mega-col">
-        <h4 class="bus">BUSINESS</h4>
-
-        <a routerLink="/cm/orders">
-          <lucide-icon name="handshake"></lucide-icon>
-          Order & Sales Management
-        </a>
-
-        <a routerLink="/cm/finance">
-          <lucide-icon name="wallet"></lucide-icon>
-          Finance & Costing
-        </a>
-      </div>
-
-
-      <!-- PLATFORM -->
-      <div class="mega-col">
-        <h4 class="plat">PLATFORM</h4>
-
-        <a routerLink="/cm/multi-plant">
-          <lucide-icon name="building-2"></lucide-icon>
-          Multi-Plant Support
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- ================= CableNXT Dropdown ================= -->
-
-  <div class="cablenxt-dropdown" *ngIf="isNxtMenuOpen">
-
-    <div class="dropdown-container">
-
-      <!-- INTELLIGENCE -->
-      <div class="dropdown-column">
-
-        <h4 class="dropdown-title intelligence">INTELLIGENCE</h4>
-
-        <ul>
-
-          <li routerLink="/nxt/pocket-margin-ai">
-            <lucide-icon name="bar-chart-3"></lucide-icon>
-            Pocket Margin AI (RFQ Level)
-          </li>
-
-          <li routerLink="/nxt/commodity-cost-simulation">
-            <lucide-icon name="flask-conical"></lucide-icon>
-            AI Cost Simulation (Copper Impact)
-          </li>
-
-          <li routerLink="/nxt/order-risk-detection">
-            <lucide-icon name="trending-down"></lucide-icon>
-            AI Sales Order Cancellation Analytics
-          </li>
-
-          <li routerLink="/nxt/ai-dashboard">
-            <lucide-icon name="layout-dashboard"></lucide-icon>
-            AI Dashboard on Demand
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- DOMAIN CONTROL -->
-      <div class="dropdown-column">
-
-        <h4 class="dropdown-title domain">DOMAIN CONTROL</h4>
-
-        <ul>
-
-          <li routerLink="/nxt/drum-traceability">
-            <lucide-icon name="database"></lucide-icon>
-            Drum-Level Traceability
-          </li>
-
-          <li routerLink="/nxt/multi-level-bom">
-            <lucide-icon name="git-branch"></lucide-icon>
-            Multi-Level Cable BOM Engine
-          </li>
-
-          <li routerLink="/nxt/stage-validation">
-            <lucide-icon name="factory"></lucide-icon>
-            Stage-Wise Production Validation
-          </li>
-
-          <li routerLink="/nxt/batch-genealogy">
-            <lucide-icon name="link"></lucide-icon>
-            Batch Genealogy Tracking
-          </li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-  </div>
 
 </div>

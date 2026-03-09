@@ -11,6 +11,19 @@
   text-align: center;
   background: #ffffff;
 }
+.ai-modules-section{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  padding:0px 0;
+}
+
+.ai-modules-section img{
+  width:100%;
+  max-width:700px;   /* controls the image size */
+  height:auto;
+  object-fit:contain;
+}
 
 .hero-title {
   font-family: 'Caveat', cursive;
@@ -44,6 +57,49 @@
   border-radius: 8px;
 }
 
+
+.ai-modules{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:25px;
+  margin-top:20px;
+}
+
+.module-card{
+  background: #e6f2f7;        /* light blue-grey box color */
+  padding:20px 26px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  font-weight:500;
+  color:#24324a;
+}
+
+.module-card lucide-icon{
+  width:24px;
+  height:24px;
+  color:#2F5DA8;            /* icon blue */
+}
+
+
+
+.module-card{
+  background:#e6f2f7;       
+  padding:20px 26px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-decoration:none;
+  color:#24324a;
+  cursor:pointer;
+}
+
+.module-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
 /* ================= SECTIONS ================= */
 
 .ai-section {
