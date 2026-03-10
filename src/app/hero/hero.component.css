@@ -59,3 +59,67 @@
   top: -10px;
   margin-left: 3px;
 }
+
+
+.header-fixed{
+  position: fixed;
+  top:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px){
+
+.text-slider{
+  height:60px;
+}
+
+.slide{
+  font-size:26px;
+  line-height:1.2;
+}
+
+.nxt{
+  font-size:0.6em;
+  top:-5px;
+}
+
+}
+@media (max-width:768px){
+
+.hero{
+  margin-top:80px;
+}
+
+}

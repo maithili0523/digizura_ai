@@ -62,3 +62,39 @@
   height:26px;
   min-width:26px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= MOBILE FIX ================= */
+
+@media (max-width:768px){
+
+.modules-grid{
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  margin:20px 15px;
+  gap:15px;
+}
+
+.module-card{
+  padding:16px;
+}
+
+}

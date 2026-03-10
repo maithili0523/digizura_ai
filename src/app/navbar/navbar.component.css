@@ -8,20 +8,10 @@
   z-index:1000;
 }
 
-
-.header-fixed{
-  width:100%;
-  background:#fff;
-  border-bottom:1px solid #eee;
-  position:fixed;
-  top:0;
-  left:0;
-  z-index:1000;
-}
-
 .navbar{
-  width:100%;
-  padding:15px 40px;
+  max-width:1300px;
+  margin:auto;
+  padding:15px 20px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -29,17 +19,17 @@
 
 /* LEFT */
 .nav-left img{
-  height:40px;
+  height:42px;
   cursor:pointer;
 }
 
-/* CENTER */
+/* CENTER MENU */
 .nav-center{
   display:flex;
-  gap:30px;
   align-items:center;
-  justify-content:center;
+  gap:28px;
   flex:1;
+  justify-content:center;
 }
 
 /* MENU LINKS */
@@ -54,14 +44,14 @@
   color:#7b4bb7;
 }
 
-/* RIGHT */
+/* RIGHT SIDE */
 .nav-right{
   display:flex;
   align-items:center;
   gap:18px;
 }
 
-/* BUTTON */
+/* DEMO BUTTON */
 .demo-btn{
   background:#2F5DA8;
   color:white;
@@ -77,95 +67,49 @@
 }
 
 
+
+
+
+
+
+
+
+
+@media (max-width:768px){
+
 .navbar{
-  max-width:1300px;
-  margin:auto;
-  padding:15px 20px;
   display:flex;
+  flex-wrap:wrap;
+}
+
+/* LOGO */
+.nav-left{
+  order:1;
+}
+
+/* BUTTON + SIGN IN */
+.nav-right{
+  order:2;
+  margin-left:auto;
+  display:flex;
+  gap:10px;
   align-items:center;
-  justify-content:space-between;
 }
 
-.nav-left img{
-  height:42px;
-  cursor:pointer;
-}
-
+/* MENU LINKS */
 .nav-center{
-  display:flex;
-  align-items:center;
-  gap:28px;
+  order:3;
+  width:100%;
+  flex:unset;
+  justify-content:flex-start;
+
+  flex-wrap:nowrap;   /* important */
+  gap:10px;           /* reduce spacing */
+  margin-top:10px;
 }
 
 .menu-link{
-  font-weight:600;
-  cursor:pointer;
-  color:#333;
-  text-decoration:none;
-  transition:0.2s;
+  font-size:13px;     /* slightly smaller */
 }
 
-.menu-link:hover{
-  color:#7b4bb7;
-}
-
-.nav-right{
-  display:flex;
-  align-items:center;
-  gap:18px;
-}
-
-.demo-btn{
-  background:#2F5DA8;
-  color:white;
-  border:none;
-  padding:10px 18px;
-  border-radius:8px;
-  font-weight:600;
-  cursor:pointer;
-}
-
-.demo-btn:hover{
-  background:#234a87;
-}
-
-.profile-menu{
-  position:relative;
-  display:flex;
-  align-items:center;
-}
-
-.avatar{
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  background:#3b6cb7;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:600;
-  cursor:pointer;
-}
-
-.dropdown{
-  position:absolute;
-  top:45px;
-  right:0;
-  background:white;
-  box-shadow:0 4px 12px rgba(0,0,0,0.15);
-  border-radius:8px;
-  width:180px;
-  padding:10px 0;
-}
-
-.dropdown a{
-  display:block;
-  padding:10px 15px;
-  text-decoration:none;
-  color:#333;
-}
-
-.dropdown a:hover{
-  background:#f5f5f5;
 }

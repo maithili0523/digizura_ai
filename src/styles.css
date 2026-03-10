@@ -2,4 +2,25 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+/* GLOBAL SETTINGS */
+*{
+  box-sizing:border-box;
+}
 
+img{
+  max-width:100%;
+  height:auto;
+}
+
+/* MOBILE BREAKPOINT */
+@media (max-width:768px){
+
+.container{
+  padding:0 15px;
+}
+
+.title{
+  font-size:26px;
+}
+
+}
